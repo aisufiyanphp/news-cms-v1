@@ -1,0 +1,1 @@
+write on chatgpt (Continue my News CMS project) when new day first come so chatgpt remember project 
