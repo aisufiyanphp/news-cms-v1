@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Admin Login</title>
+  <title>Admin Login :: News CMS V1</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -26,24 +26,30 @@
     </div>
     <div class="card-body">
       <p class="login-box-msg">Sign in to Manage Admin Panel</p>
-
-      <form action="{{route('admin.dashboard')}}" method="get">
+      
+      <form action="{{route('admin.login.submit')}}" method="post">
+        @csrf
         <div class="input-group mb-3">
-          <input type="email" class="form-control" placeholder="Email">
+          <input type="email" name="email" class="form-control" placeholder="Email" value="{{old('email')}}">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-envelope"></span>
             </div>
-          </div>
-        </div>
+          </div>          
+        </div>        
         <div class="input-group mb-3">
-          <input type="password" class="form-control" placeholder="Password">
+          <input type="password" class="form-control" name="password" placeholder="Password">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>
             </div>
           </div>
         </div>
+        @if(count($errors) > 0)
+        <div class="alert alert-danger">
+           {{$errors->first()}}
+        </div>
+        @endif
         <div class="row">
           <!-- <div class="col-8">
             <div class="icheck-primary">
