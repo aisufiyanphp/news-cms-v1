@@ -45,9 +45,11 @@
             </div>
           </div>
         </div>
-        @if(count($errors) > 0)
-        <div class="alert alert-danger">
-           {{$errors->first()}}
+        @if(count($errors) > 0)        
+        <div class="alert alert-danger alert-dismissible">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            <h5><i class="icon fas fa-ban"></i> Error!</h5>
+            {{$errors->first()}}
         </div>
         @endif
         <div class="row">
@@ -91,10 +93,10 @@
 <!-- /.login-box -->
 
 <!-- jQuery -->
-<script src="../../plugins/jquery/jquery.min.js"></script>
+<script src="{{asset('admin-assets/plugins/jquery/jquery.min.js')}}"></script>
 <!-- Bootstrap 4 -->
-<script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="{{asset('admin-assets/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 <!-- AdminLTE App -->
-<script src="../../dist/js/adminlte.min.js"></script>
+<script src="{{asset('admin-assets/dist/js/adminlte.min.js')}}"></script>
 </body>
 </html>

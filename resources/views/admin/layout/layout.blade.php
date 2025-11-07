@@ -7,12 +7,14 @@
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-  <!-- Font Awesome -->
-  <!-- <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css"> -->
+  <!-- Font Awesome -->  
   <link rel="stylesheet" href="{{asset('admin-assets/plugins/fontawesome-free/css/all.min.css')}}">
-  <!-- Theme style -->
-  <!-- <link rel="stylesheet" href="../../dist/css/adminlte.min.css"> -->
-  <link rel="stylesheet" href="{{asset('admin-assets/dist/css/adminlte.min.css')}}">
+
+  @stack('style_link')
+
+  <!-- Theme style -->  
+  <!-- <link rel="stylesheet" href="{{asset('admin-assets/dist/css/adminlte.min.css')}}"> -->
+  <link rel="stylesheet" href="{{asset('admin-assets/dist/css/adminlte.css')}}">
 </head>
 <body class="hold-transition sidebar-mini">
 <!-- Site wrapper -->
@@ -90,16 +92,19 @@
 <!-- ./wrapper -->
 
 <!-- jQuery -->
-<!-- <script src="../../plugins/jquery/jquery.min.js"></script> -->
 <script src="{{asset('admin-assets/plugins/jquery/jquery.min.js')}}"></script>
 <!-- Bootstrap 4 -->
-<!-- <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script> -->
 <script src="{{asset('admin-assets/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 <!-- AdminLTE App -->
-<!-- <script src="../../dist/js/adminlte.min.js"></script> -->
-<script src="{{asset('admin-assets/dist/js/adminlte.min.js')}}"></script>
+
+@stack('scripts_link')
+
+<!-- <script src="{{asset('admin-assets/dist/js/adminlte.min.js')}}"></script> -->
+<script src="{{asset('admin-assets/dist/js/adminlte.js')}}"></script>
 <!-- AdminLTE for demo purposes -->
 <!-- <script src="../../dist/js/demo.js"></script> -->
 <script src="{{asset('admin-assets/dist/js/demo.js')}}"></script>
+
+@stack('bottom_scripts')
 </body>
 </html>
