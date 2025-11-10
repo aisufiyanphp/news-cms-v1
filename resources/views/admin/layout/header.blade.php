@@ -131,11 +131,11 @@
 	    </a>
 	    <div class="dropdown-menu dropdown-menu-right">	      
 	      <!-- <div class="dropdown-divider"></div> -->
-	      <a href="#" class="dropdown-item">
+	      <a href="{{route('admin.profile')}}" class="dropdown-item">
 	        <i class="fas fa-users mr-2"></i> Admin Profile	        
 	      </a>  	
 	      <!-- <div class="dropdown-divider"></div> -->
-	      <a href="#" class="dropdown-item">
+	      <a href="{{route('admin.change.password')}}" class="dropdown-item">
 	        <i class="fas fa-unlock-alt mr-2"></i> Change Password	        
 	      </a>	      
 	      <!-- <div class="dropdown-divider"></div> -->

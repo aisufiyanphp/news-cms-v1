@@ -43,10 +43,22 @@
           </li>     
           <li class="nav-item">
             <a href="{{route('admin.category.list')}}" class="nav-link">
-              <i class="far fa-circle nav-icon text-info"></i>
+              <i class="nav-icon far fa-circle text-info"></i>
               <p>Category</p>
             </a>
-          </li>     
+          </li>
+          <li class="nav-item">
+            <a href="{{route('admin.sub.category.list')}}" class="nav-link">
+              <i class="nav-icon far fa-circle text-primary"></i>
+              <p>Sub Category</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{route('admin.news.list')}}" class="nav-link">
+              <i class="nav-icon far fa-newspaper"></i>
+              <p>News</p>
+            </a>
+          </li>                     
               
           <!-- <li class="nav-item">
             <a href="#" class="nav-link">

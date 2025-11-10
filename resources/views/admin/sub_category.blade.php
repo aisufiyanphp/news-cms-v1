@@ -1,8 +1,8 @@
 @extends('admin.layout.layout')
 
-@section('title', 'Category :: News CMS V1')
+@section('title', 'Sub Category :: News CMS V1')
 
-@section('page-title', 'Category')
+@section('page-title', 'Sub Category')
 
 @section('content')
 <div class="container-fluid">
@@ -10,7 +10,7 @@
 	  <div class="col-12">	    
 	    <div class="card">
 	      <div class="card-header text-right">
-            <a href="{{route('admin.add.category')}}" class="btn btn-outline-primary" title="Add Category">
+            <a href="{{route('admin.add.sub.category')}}" class="btn btn-outline-primary" title="Add Category">
             	<i class="nav-icon fas fa-plus"></i>
             </a>  	      	
 	      </div>
@@ -41,11 +41,11 @@
 		          	  <span class="badge badge-success">Active</span>
 		          	</td>
 		          	<td>
-		          		 <a href="{{route('admin.edit.category')}}" class="btn btn-outline-primary btn-sm" title="Edit Category">
+		          		 <a href="{{route('admin.edit.sub.category')}}" class="btn btn-outline-primary btn-sm" title="Edit Sub Category">
 			               	<i class="fas fa-edit"></i>
 			             </a>
 			             &nbsp;
-			             <a href="{{route('admin.add.category')}}" class="btn btn-outline-danger btn-sm" title="Add Category">
+			             <a href="#" class="btn btn-outline-danger btn-sm" title="Delete Sub Category">
 			               	<i class="fas fa-trash"></i>
 			             </a> 		          		 
 		          	</td>
