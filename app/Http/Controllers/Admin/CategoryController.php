@@ -5,7 +5,9 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Validation\Rule;
 use  App\Models\Category;
+use  App\Models\SubCategory;
 
 class CategoryController extends Controller
 {    
@@ -100,8 +102,18 @@ class CategoryController extends Controller
     }
     
     //Sub Category
-    public function subCategory(){        
-        return view('admin.sub_category');
+    public function subCategory(){     
+        $subCategories = SubCategory::with('category:id,category_title')->orderBy('id', 'desc')->get();                
+        return view('admin.sub_category', compact('subCategories'));
+    }
+
+    public function allSubCategory($id){
+        $category = Category::where("id", $id)->get(["category_title"]);               
+        $subCategories = SubCategory::where("category_id", $id)->get();        
+        if(count($subCategories) > 0){
+           return view('admin.all_sub_category', compact('subCategories', 'category'));
+        }
+        return redirect()->back();
     }
 
     public function addSubCategory(){
@@ -111,11 +123,17 @@ class CategoryController extends Controller
 
     public function submitAddSubCategory(Request $request){                
         $validator = Validator::make($request->all(), [
-          'title' => 'required|unique:categories,category_title',
+          'title' => 'required|unique:sub_categories,title',
           'category' => 'required|integer|exists:categories,id',
           'description' => 'required|max:150',
           'status' => 'required|boolean',
-          'order' => 'required|integer|unique:categories,order',
+          'order' => [
+                'required',
+                'integer',
+                Rule::unique('sub_categories')->where(function ($query) use ($request) {
+                    return $query->where('category_id', $request->category);
+                }),
+          ],
           'meta_title' => 'nullable|string|max:255',
           'meta_keywords' => 'nullable|string|max:255',
           'meta_description' => 'nullable|string|max:255',
@@ -125,19 +143,19 @@ class CategoryController extends Controller
            return response()->json($result);
         }
         try{
-            
-            debug("validate");
-            // $category = Category::create([
-            //    'category_title' => $request->input('title'),
-            //    'description' => $request->input('description'),
-            //    'status' => $request->input('status'),
-            //    'order' => $request->input('order'),
-            //    'meta_title' => $request->input('meta_title'),
-            //    'meta_keywords' => $request->input('meta_keyword'),
-            //    'meta_description' => $request->input('meta_description'),
-            // ]);
-            // $result = ["status"=>true, "msg"=>"Category successfully created"];
-            // return response()->json($result); 
+                        
+            $category = SubCategory::create([
+               'title' => $request->input('title'),
+               'category_id' => $request->input('category'),
+               'description' => $request->input('description'),
+               'status' => $request->input('status'),
+               'order' => $request->input('order'),
+               'meta_title' => $request->input('meta_title'),
+               'meta_keywords' => $request->input('meta_keyword'),
+               'meta_description' => $request->input('meta_description'),
+            ]);
+            $result = ["status"=>true, "msg"=>"Sub Category successfully created"];
+            return response()->json($result); 
 
         }catch(\Exception $e){
             $result = ["status"=>false, "msg" => $e->getMessage()];                      
@@ -146,7 +164,59 @@ class CategoryController extends Controller
         }            
     }
 
-    public function editSubCategory(){
-        return view('admin.edit_sub_category');
+    public function editSubCategory($id){
+        $categories = Category::orderBy('id', 'desc')->get();    
+        $subCategory = SubCategory::where('id', $id)->get();
+        if(count($subCategory) > 0){
+           return view('admin.edit_sub_category', compact('categories', 'subCategory'));    
+        }    
+        return redirect()->back();
+        
+    }
+
+    public function submiteditSubCategory(Request $request){  
+                  
+        $validator = Validator::make($request->all(), [
+          'subCategoryId' => 'required|integer|exists:sub_categories,id',  
+          'title' => 'required|unique:sub_categories,title,'.$request->input('subCategoryId'),
+          'category' => 'required|integer|exists:categories,id',
+          'description' => 'required|max:150',
+          'status' => 'required|boolean',
+          'order' => [
+                'required',
+                'integer',
+                Rule::unique('sub_categories')
+                ->where(fn($query) => $query->where('category_id', $request->input('category')))
+                ->ignore($request->input('subCategoryId')), 
+          ],
+          'meta_title' => 'nullable|string|max:255',
+          'meta_keywords' => 'nullable|string|max:255',
+          'meta_description' => 'nullable|string|max:255',
+        ])->stopOnFirstFailure();
+        if($validator->fails()){
+           $result = ["status"=>false, "msg" => $validator->errors()->first()];                      
+           return response()->json($result);
+        }
+        try{
+
+            $subCategory = SubCategory::findOrFail($request->input('subCategoryId'));            
+            $subCategory->update([
+               'title' => $request->input('title'),
+               'category_id' => $request->input('category'),
+               'description' => $request->input('description'),
+               'status' => $request->input('status'),
+               'order' => $request->input('order'),
+               'meta_title' => $request->input('meta_title'),
+               'meta_keywords' => $request->input('meta_keyword'),
+               'meta_description' => $request->input('meta_description'),
+            ]);            
+            $result = ["status"=>true, "msg"=>"Sub Category successfully update"];
+            return response()->json($result); 
+
+        }catch(\Exception $e){
+            $result = ["status"=>false, "msg" => $e->getMessage()];                      
+            //$result = ["status"=>false, "msg" => "Technical Error! Category not created "];                      
+            return response()->json($result); 
+        }            
     }
 }

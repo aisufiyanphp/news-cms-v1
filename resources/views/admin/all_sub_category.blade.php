@@ -2,7 +2,7 @@
 
 @section('title', 'Sub Category :: News CMS V1')
 
-@section('page-title', 'Sub Category')
+@section('page-title', $category[0]->category_title.' Sub Category')
 
 @section('content')
 <div class="container-fluid">
@@ -20,8 +20,7 @@
 	          <thead>
 		          <tr>
 		            <th>#</th>
-		            <th>Title</th>
-		            <th>Category</th>
+		            <th>Title</th>		            
 		            <th>Desc</th>		            
 		            <th>M. Title</th>
 		            <th>M. Keyword</th>
@@ -34,10 +33,7 @@
 	          	@foreach($subCategories as $subCategory)
 		          <tr>
 		          	<td>{{$loop->iteration}}</td>
-		          	<td>{{$subCategory->title}}</td>
-		          	<td>
-		          		 <a href="{{route('admin.all.sub.category', ['id'=>$subCategory->category_id])}}" title='{{$subCategory["category"]->category_title}}'>{{$subCategory["category"]->category_title}}</a>
-		            </td>
+		          	<td>{{$subCategory->title}}</td>		          	
 		          	<td>{{$subCategory->description}}</td>
 		          	<td>{{$subCategory->meta_title}}</td>
 		          	<td>{{$subCategory->meta_keywords}}</td>

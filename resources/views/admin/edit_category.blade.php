@@ -103,12 +103,14 @@ $(document).ready(function(){
            success: function(response){
               console.log(response);
               hideBtnProcess('#editCategoryForm button');              
-              if(response.status){
-                 event.target.reset();
+              if(response.status){                 
                  Toast.fire({
                    icon: 'success',
                    title: response.msg
                  });
+                 setTimeout(function(){
+                   window.location.href = "{{route('admin.category.list')}}";                 
+                 }, 2000);                 
               }else{
                  Toast.fire({
                    icon: 'error',

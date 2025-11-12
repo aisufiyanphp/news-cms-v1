@@ -115,9 +115,7 @@ $(document).ready(function(){
            beforSend: function(){
               showBtnProcess('#addSubCategoryForm button');
            },
-           success: function(response){
-              console.log(response);
-              return false;
+           success: function(response){              
               hideBtnProcess('#addSubCategoryForm button');              
               if(response.status){
                  event.target.reset();
