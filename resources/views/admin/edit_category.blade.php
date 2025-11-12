@@ -7,41 +7,51 @@
 @section('content')
 <div class="container-fluid">
   <div class="row">      
-      <div class="col-4">        
+      <div class="col-lg-4 col-md-8">        
         <div class="card card-dark">                    
           <!-- form start -->
-          <form action="" method="post">
+          <form action="{{route('admin.submit.edit.category')}}" method="post" id="editCategoryForm">
             @csrf
+            <input type="hidden" name="category_id" value="{{$category[0]->id}}">            
             <div class="card-body">            
-                <div class="form-group">
+               <div class="form-group">
                   <label for="title">Title</label>
-                  <input type="text" class="form-control" name="title" id="title" placeholder="Title">
-              </div>  
-              <div class="form-group">
-                  <label for="status">Status</label>
-                  <select class="custom-select rounded-0" id="status" name="status">
-                    <option value="1">Active</option>
-                    <option value="0">Deactive</option>                    
-                  </select>
-                </div>
-              <div class="form-group">
+                  <input type="text" class="form-control" name="title" id="title" placeholder="Title" value="{{$category[0]->category_title}}">
+               </div>
+               <div class="row">
+                 <div class="col-md-6 col-sm-12">
+                     <div class="form-group">
+                        <label for="status">Status</label>
+                        <select class="custom-select rounded-0" id="status" name="status">
+                          <option value="1" @selected($category[0]->status == '1')>Active</option>
+                          <option value="0" @selected($category[0]->status == '0')>Deactive</option>                    
+                        </select>
+                     </div>    
+                 </div>
+                 <div class="col-md-6 col-sm-12">
+                      <div class="form-group">
+                          <label for="title">Order</label>
+                          <input type="number" min="1" class="form-control" name="order" id="order" placeholder="Category Order" value="{{$category[0]->order}}">
+                      </div>
+                 </div>
+               </div>                 
+               <div class="form-group">
                   <label>Description</label>
-                  <textarea class="form-control" name="description" id="description" rows="2" placeholder="Description"></textarea>
-                </div>
-                <div class="form-group">
+                  <textarea class="form-control" name="description" id="description" rows="2" placeholder="Description">{{$category[0]->description}}</textarea>
+               </div>
+               <div class="form-group">
                   <label for="title">Meta Title</label>
-                  <input type="text" class="form-control" name="meta_title" id="meta_title" placeholder="Meta Title">
-              </div>
-              <div class="form-group">
+                  <input type="text" class="form-control" name="meta_title" id="meta_title" placeholder="Meta Title" value="{{$category[0]->meta_title}}">
+               </div>
+               <div class="form-group">
                   <label>Meta Keyword (comma seprated)</label>
-                  <textarea class="form-control" rows="2" name="meta_keyword" id="meta_keyword" placeholder="Meta Keyword"></textarea>
-                </div>
-                <div class="form-group">
+                  <textarea class="form-control" rows="2" name="meta_keyword" id="meta_keyword" placeholder="Meta Keyword">{{$category[0]->meta_keywords}}</textarea>
+               </div>
+               <div class="form-group">
                   <label>Meta Description</label>
-                  <textarea class="form-control" rows="2" name="meta_description" placeholder="Meta Description"></textarea>
-                </div>  
-
-              <button type="submit" class="btn btn-dark btn-block">Submit</button>
+                  <textarea class="form-control" rows="2" name="meta_description" placeholder="Meta Description">{{$category[0]->meta_description}}</textarea>
+               </div>  
+               <button type="submit" class="btn btn-dark btn-block">Submit</button>
             </div>                        
           </form>
         </div>        
@@ -50,20 +60,75 @@
 </div>
 @endsection
 
+@push('scripts_link')
+  <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+@endpush
+
 @push('bottom_scripts')
 <script>
-$(document).ready(function(){
-   // const toast = $(document).Toasts('create', {
-   //   class: 'bg-success',
-   //   title: 'Toast Title',
-   //   subtitle: 'Subtitle',
-   //   body: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.',
-   //   autohide: false
-   // });
-   // console.log(toast);
-   // setTimeout(function(){
-   //    toast.toast('hide');
-   // }, 2000);
+
+$(document).ready(function(){   
+
+    const categoryValidator = new JustValidate('#editCategoryForm', {
+         errorFieldCssClass: 'is-invalid', // class added to invalid fields
+         successFieldCssClass: 'is-valid', // class added to valid fields
+    });
+    categoryValidator.addField('#title', [
+      {rule: 'required', errorMessage:'Category title is required'},
+      {rule: 'minLength', value: 3}
+
+    ]).addField('#order', [
+       {rule: 'required', errorMessage: 'Category Order is required'},
+       {rule: 'number'},
+       {rule: 'minNumber', value: 1}
+
+    ]).addField('#description', [
+       {rule: 'required', errorMessage: 'Category description is required'},
+       {rule: 'maxLength', value: 150}
+       
+    ]).onSuccess((event) => {              
+       let form  = event.target;
+       let formData = new FormData(form);       
+
+       $.ajax({
+           url: '{{route("admin.submit.edit.category")}}',
+           method: 'post',
+           dataType: 'JSON',
+           data: formData,
+           contentType: false,
+           processData: false,
+           beforSend: function(){
+              showBtnProcess('#editCategoryForm button');
+           },
+           success: function(response){
+              console.log(response);
+              hideBtnProcess('#editCategoryForm button');              
+              if(response.status){
+                 event.target.reset();
+                 Toast.fire({
+                   icon: 'success',
+                   title: response.msg
+                 });
+              }else{
+                 Toast.fire({
+                   icon: 'error',
+                   title: response.msg
+                 });
+              }
+           },
+           error: function(error){
+              console.log(error);
+              hideBtnProcess('#editCategoryForm button');
+              Toast.fire({
+                 icon: 'error',
+                 title: 'Technical Error! Contact to developers'
+              });
+           }   
+       });
+
+    });
+
 });
+
 </script>
 @endpush

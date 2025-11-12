@@ -30,26 +30,32 @@
 		          </tr>
 	          </thead>
 	          <tbody>
-		          <tr>
-		          	<td>1</td>
-		          	<td>Title</td>
-		          	<td>Desc</td>
-		          	<td>M. Title</td>
-		          	<td>M.keyword</td>
-		          	<td>M. Desc</td>
-		          	<td>
-		          	  <span class="badge badge-success">Active</span>
-		          	</td>
-		          	<td>
-		          		 <a href="{{route('admin.edit.category')}}" class="btn btn-outline-primary btn-sm" title="Edit Category">
-			               	<i class="fas fa-edit"></i>
-			             </a>
-			             &nbsp;
-			             <a href="{{route('admin.add.category')}}" class="btn btn-outline-danger btn-sm" title="Add Category">
-			               	<i class="fas fa-trash"></i>
-			             </a> 		          		 
-		          	</td>
-		          </tr>
+	          	@foreach($categories as $category)
+                <tr>
+	                <td>{{$loop->iteration}}</td>
+			          	<td>{{$category->category_title}}</td>
+			          	<td>{{$category->description}}</td>
+			          	<td>{{$category->meta_title}}</td>
+			          	<td>{{$category->meta_keywords}}</td>
+			          	<td>{{$category->meta_description}}</td>
+			          	<td>
+			          		@if($category->status)
+			          	    <span class="badge badge-success">Active</span>
+			          	  @else
+			          	    <span class="badge badge-danger">Deactive</span>
+			          	  @endif
+			          	</td>
+			          	<td>
+			          		 <a href="{{route('admin.edit.category', ['id'=>$category->id])}}" class="btn btn-outline-primary btn-sm" title="Edit Category">
+				               	<i class="fas fa-edit"></i>
+				             </a>
+				             &nbsp;
+				             <a href="{{route('admin.add.category')}}" class="btn btn-outline-danger btn-sm" title="Delete Category">
+				               	<i class="fas fa-trash"></i>
+				             </a> 		          		 
+			          	</td>
+                </tr>  
+	          	@endforeach		          
 	          </tbody>	         
 	        </table>
 	      </div>
@@ -89,7 +95,6 @@
 @push('bottom_scripts')
 <script>
   $(function () {
-
     $("#example1").DataTable({
       "responsive": true,
       "lengthChange": true, 

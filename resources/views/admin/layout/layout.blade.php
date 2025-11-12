@@ -12,6 +12,8 @@
 
   @stack('style_link')
 
+  <!-- SweetAlert2 -->
+  <link rel="stylesheet" href="{{asset('admin-assets/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css')}}">
   <!-- Theme style -->  
   <!-- <link rel="stylesheet" href="{{asset('admin-assets/dist/css/adminlte.min.css')}}"> -->
   <link rel="stylesheet" href="{{asset('admin-assets/dist/css/adminlte.css')}}">
@@ -99,11 +101,34 @@
 
 @stack('scripts_link')
 
+<!-- SweetAlert2 -->
+<script src="{{asset('admin-assets/plugins/sweetalert2/sweetalert2.min.js')}}"></script>
 <!-- <script src="{{asset('admin-assets/dist/js/adminlte.min.js')}}"></script> -->
 <script src="{{asset('admin-assets/dist/js/adminlte.js')}}"></script>
 <!-- AdminLTE for demo purposes -->
 <!-- <script src="../../dist/js/demo.js"></script> -->
 <script src="{{asset('admin-assets/dist/js/demo.js')}}"></script>
+<script>
+var Toast = Swal.mixin({
+  toast: true,
+  position: 'top-end',
+  showConfirmButton: false,
+  timer: 4000,  
+});  
+
+function showBtnProcess(id){
+  let submitBtn = $(id);    
+  submitBtn.text('');
+  submitBtn.prop('disabled', true);
+  submitBtn.append('Processing &nbsp; <span class="spinner-border spinner-border-sm"></span> ');
+} 
+function hideBtnProcess(id){
+  let submitBtn = $(id);      
+  submitBtn.prop('disabled', false);
+  submitBtn.empty();
+  submitBtn.text('Submit');
+}     
+</script>
 
 @stack('bottom_scripts')
 </body>

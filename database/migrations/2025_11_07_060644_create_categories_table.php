@@ -14,9 +14,10 @@ return new class extends Migration
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
             $table->string('category_title')->unique();
-            $table->string('slug')->unique();
+            $table->string('slug')->unique();            
             $table->text('description')->nullable();
             $table->boolean('status')->default(1);
+            $table->integer('order')->unique();
 
             // SEO fields
             $table->string('meta_title')->nullable();

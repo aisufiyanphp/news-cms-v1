@@ -35,15 +35,22 @@ Route::prefix('admin')->group(function(){
 
       Route::get('category', [CategoryController::class, 'category'])->name('admin.category.list');
       Route::get('add-category', [CategoryController::class, 'addCategory'])->name('admin.add.category');
-      Route::get('edit-category', [CategoryController::class, 'editCategory'])->name('admin.edit.category');
+      Route::post('add-category', [CategoryController::class, 'submitCategory'])->name('admin.submit.category');  
+      Route::get('edit-category/{id}', [CategoryController::class, 'editCategory'])->name('admin.edit.category')->whereNumber('id');
+      Route::post('edit-category', [CategoryController::class, 'submitEditCategory'])->name('admin.submit.edit.category');      
 
       Route::get('sub-category', [CategoryController::class, 'subCategory'])->name('admin.sub.category.list');
       Route::get('add-sub-category', [CategoryController::class, 'addSubCategory'])->name('admin.add.sub.category');
+      Route::post('add-sub-category', [CategoryController::class, 'submitAddSubCategory'])->name('admin.submit.add.sub.category');
       Route::get('edit-sub-category', [CategoryController::class, 'editSubCategory'])->name('admin.edit.sub.category');
 
       Route::get('news', [NewsController::class, "news"])->name('admin.news.list');
       Route::get('add-news', [NewsController::class, "addNews"])->name('admin.add.news');
   }); 
   
+});
+
+Route::fallback(function () {
+   return redirect()->route('admin.login');
 });
 
