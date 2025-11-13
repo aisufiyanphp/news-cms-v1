@@ -8,40 +8,39 @@
 <div class="container-fluid">
   <div class="card"> 
     <div class="card-body">
-      <form action="" method="post">
+      <form action="" method="post" enctype="multipart/form-data" id="addNewsForm">
       @csrf
       	<div class="row"> 
-          <div class="col-md-4">
+          <div class="col-lg-4">
         	    <div class="form-group">
                 <label for="title">Title</label>
                 <input type="text" class="form-control" name="title" id="title" placeholder="Title">
               </div>  
-              <div class="form-group">
-                <label for="category">Category</label>
-                <select class="custom-select rounded-0" id="category" name="category">
-                  <option value="">Select Category</option>                    
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="sub_category">Sub Category</label>
-                <select class="custom-select rounded-0" id="sub_category" name="sub_category">
-                  <option value="">Select Sub Category</option>                    
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="status">Status (Publish)</label>
-                <select class="custom-select rounded-0" id="status" name="status">
-                  <option value="1">Publish</option>
-                  <option value="0">Draft</option>                    
-                </select>
-              </div>
+              <div class="row">
+                 <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="category">Category</label>
+                      <select class="custom-select rounded-0" id="category" name="category">
+                        <option value="">Select Category</option>                    
+                      </select>
+                    </div>  
+                 </div>
+                 <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="sub_category">Sub Category</label>
+                      <select class="custom-select rounded-0" id="sub_category" name="sub_category">
+                        <option value="">Select Sub Category</option>                    
+                      </select>
+                    </div>
+                 </div>
+              </div>                                          
               <div class="row"> 
                 <div class="col-md-6">
                    <div class="form-group">
                       <label>Publish Date</label>
-                      <div class="input-group date" id="reservationdate" data-target-input="nearest">
-                        <input type="text" class="form-control datetimepicker-input" data-target="#reservationdate"/>
-                        <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
+                      <div class="input-group date" id="publish_date" data-target-input="nearest">
+                        <input type="text" class="form-control datetimepicker-input" data-target="#publish_date"/>
+                        <div class="input-group-append" data-target="#publish_date" data-toggle="datetimepicker">
                             <div class="input-group-text"><i class="fa fa-calendar"></i></div>
                         </div>
                       </div>
@@ -61,8 +60,30 @@
                   </div>
                 </div>
               </div>
+              <div class="row">
+                 <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="status">Status (Publish)</label>
+                        <select class="custom-select rounded-0" id="status" name="status">
+                          <option value="1">Publish</option>
+                          <option value="0">Draft</option>                    
+                        </select>
+                      </div>     
+                 </div>
+                 <div class="col-md-6">
+                     <div class="form-group">
+                        <label>Publish End Date</label>
+                        <div class="input-group date" id="publish_end_date" data-target-input="nearest">
+                          <input type="text" class="form-control datetimepicker-input" data-target="#publish_end_date"/>
+                          <div class="input-group-append" data-target="#publish_end_date" data-toggle="datetimepicker">
+                              <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                          </div>
+                        </div>
+                     </div>
+                 </div>
+              </div>
               
-              <div class="form-group mt-1">                    
+              <div class="form-group mt-2">                    
                   <div class="custom-file">
                     <input type="file" class="custom-file-input" id="customFile">
                     <label class="custom-file-label" for="customFile">Thumbnail Img</label>
@@ -84,7 +105,7 @@
               </div>     
               
           </div>          
-          <div class="col-md-8">                                     
+          <div class="col-lg-8">                                     
               <div class="form-group">
                   <label>Content</label>
                   <textarea class="form-control" rows="2" name="content" id="content" placeholder="Content"></textarea>
@@ -124,7 +145,7 @@
 <script>
 $(document).ready(function(){
    //Date picker
-   $('#reservationdate').datetimepicker({
+   $('#publish_date, #publish_end_date').datetimepicker({
       format: 'L'
    });
    //Timepicker
