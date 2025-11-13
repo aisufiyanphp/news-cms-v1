@@ -14,4 +14,8 @@ class DashboardController extends Controller
         $data['sub_category'] = SubCategory::count();        
         return view('admin.dashboard', compact('data'));
     }
+
+    public function settings(){
+        return view('admin.setting');
+    }
 }

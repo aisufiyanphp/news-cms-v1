@@ -58,6 +58,12 @@
               <i class="nav-icon far fa-newspaper"></i>
               <p>News</p>
             </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{route('admin.settings')}}" class="nav-link">
+              <i class="nav-icon far fa-circle text-info"></i>
+              <p>Settings</p>
+            </a>
           </li>                     
               
           <!-- <li class="nav-item">

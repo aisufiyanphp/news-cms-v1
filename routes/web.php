@@ -32,6 +32,7 @@ Route::prefix('admin')->group(function(){
       Route::get('change-password', [ProfileController::class, 'changePassword'])->name('admin.change.password');
 
       Route::get('dashboard', [DashboardController::class, 'dashboard'])->name('admin.dashboard');
+      Route::get('settings', [DashboardController::class, 'settings'])->name('admin.settings');
 
       Route::get('category', [CategoryController::class, 'category'])->name('admin.category.list');
       Route::get('add-category', [CategoryController::class, 'addCategory'])->name('admin.add.category');
