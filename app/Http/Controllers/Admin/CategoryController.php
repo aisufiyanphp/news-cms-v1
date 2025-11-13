@@ -12,7 +12,7 @@ use  App\Models\SubCategory;
 class CategoryController extends Controller
 {    
     public function category(){
-        $categories = Category::orderBy('order', 'asc')->get();
+        $categories = Category::getCategory();
         return view('admin.category', compact('categories'));
     }
 
@@ -56,7 +56,7 @@ class CategoryController extends Controller
     }
 
     public function editCategory($id){
-        $category = Category::where('id', $id)->get();
+        $category = Category::getCategory($id);
         if(count($category) > 0){
            return view('admin.edit_category', compact('category'));    
         }
@@ -107,17 +107,29 @@ class CategoryController extends Controller
         return view('admin.sub_category', compact('subCategories'));
     }
 
-    public function allSubCategory($id){
-        $category = Category::where("id", $id)->get(["category_title"]);               
-        $subCategories = SubCategory::where("category_id", $id)->get();        
-        if(count($subCategories) > 0){
-           return view('admin.all_sub_category', compact('subCategories', 'category'));
-        }
-        return redirect()->back();
+    public function allSubCategory(Request $request, $id){
+        if($request->ajax()){
+            $category = Category::getCategory($id);
+            $subCategories = SubCategory::where("category_id", $id)->get(["id", "title"]);  
+            if(count($subCategories) > 0){
+                $result = ["status"=>true, "msg"=>ucwords($category[0]->category_title)." Sub Category list", "data"=>$subCategories];
+                return response()->json($result); 
+            }else{
+                $result = ["status"=>false, "msg"=>ucwords($category[0]->category_title)." Sub Category Not found"];
+                return response()->json($result); 
+            }   
+        }else{            
+            $category = Category::getCategory($id, "category_title");            
+            $subCategories = SubCategory::where("category_id", $id)->get();        
+            if(count($subCategories) > 0){
+               return view('admin.all_sub_category', compact('subCategories', 'category'));
+            }
+            return redirect()->back();
+        }        
     }
 
-    public function addSubCategory(){
-        $categories = Category::orderBy('id', 'desc')->get();        
+    public function addSubCategory(){        
+        $categories = Category::getCategory();
         return view('admin.add_sub_category', compact('categories'));
     }
 
@@ -164,8 +176,8 @@ class CategoryController extends Controller
         }            
     }
 
-    public function editSubCategory($id){
-        $categories = Category::orderBy('id', 'desc')->get();    
+    public function editSubCategory($id){        
+        $categories = Category::getCategory();    
         $subCategory = SubCategory::where('id', $id)->get();
         if(count($subCategory) > 0){
            return view('admin.edit_sub_category', compact('categories', 'subCategory'));    

@@ -25,6 +25,17 @@ class Category extends Model
         'deleted_at'
     ];
 
+    public static function getCategory($id=null, $select=null){
+        $query = self::orderBy('order', 'asc');
+        if(!is_null($id)){
+           $query->where('id', $id);
+        }
+        if(!is_null($select)){
+           $query->select($select);
+        }
+        return $query->get();
+    }
+
     protected static function booted(){
 
         static::creating(function($category){

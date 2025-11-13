@@ -41,14 +41,17 @@ Route::prefix('admin')->group(function(){
       Route::post('edit-category', [CategoryController::class, 'submitEditCategory'])->name('admin.submit.edit.category');      
 
       Route::get('sub-category', [CategoryController::class, 'subCategory'])->name('admin.sub.category.list');
-      Route::get('all-sub-category/{id}', [CategoryController::class, 'allSubCategory'])->name('admin.all.sub.category');
+      Route::get('all-sub-category/{id}', [CategoryController::class, 'allSubCategory'])->name('admin.all.sub.category');      
       Route::get('add-sub-category', [CategoryController::class, 'addSubCategory'])->name('admin.add.sub.category');
       Route::post('add-sub-category', [CategoryController::class, 'submitAddSubCategory'])->name('admin.submit.add.sub.category');
       Route::get('edit-sub-category/{id}', [CategoryController::class, 'editSubCategory'])->name('admin.edit.sub.category')->whereNumber('id');
       Route::post('edit-sub-category', [CategoryController::class, 'submiteditSubCategory'])->name('admin.submit.edit.sub.category');
-
+      
+      //news 
       Route::get('news', [NewsController::class, "news"])->name('admin.news.list');
       Route::get('add-news', [NewsController::class, "addNews"])->name('admin.add.news');
+      Route::post('add-news', [NewsController::class, "submitAddNews"])->name('admin.submit.add.news');
+      Route::get('edit-news/{id}', [NewsController::class, "editNews"])->name('admin.edit.news')->whereNumber('id');
   }); 
   
 });

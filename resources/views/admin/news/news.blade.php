@@ -21,24 +21,23 @@
 		          <tr>
 		            <th>#</th>
 		            <th>Title</th>
-		            <th>Desc</th>		            
-		            <th>M. Title</th>
-		            <th>M. Keyword</th>
-		            <th>M. Desc</th>
-		            <th>Status</th>
-		            <th>Action</th>
+		            <th>category</th>		            
+		            <th>Sub Cat.</th>
+		            <th>P. DateTime</th>		            
+		            <th>Status</th>		            
+		            <th>acton</th>
 		          </tr>
 	          </thead>
 	          <tbody>
-		          <tr>
-		          	<td>1</td>
-		          	<td>Title</td>
-		          	<td>Desc</td>
-		          	<td>M. Title</td>
-		          	<td>M.keyword</td>
-		          	<td>M. Desc</td>
+	          	@foreach($newsList as $news)
+	          	<tr>
+		          	<td>{{$loop->iteration}}</td>
+		          	<td>{{$news->title}}</td>
+		          	<td>{{$news->category_id}}</td>
+		          	<td>{{$news->sub_category_id}}</td>
+		          	<td>{{$news->publish_date}}</td>		          	
 		          	<td>
-		          	  <span class="badge badge-success">Active</span>
+		          	  <span class="badge badge-success">{{$news->status}}</span>
 		          	</td>
 		          	<td>
 		          		 <a href="#" class="btn btn-outline-primary btn-sm" title="Edit Category">
@@ -49,7 +48,8 @@
 			               	<i class="fas fa-trash"></i>
 			             </a> 		          		 
 		          	</td>
-		          </tr>
+		          </tr>	          	
+	          	@endforeach		          
 	          </tbody>	         
 	        </table>
 	      </div>
