@@ -1,31 +1,32 @@
 @extends('admin.layout.layout')
 
-@section('title', 'Add News')
+@section('title', 'Edit News')
 
-@section('page-title', 'Add News')
+@section('page-title', 'Edit News')
 
 @section('content')
 <div class="container-fluid">
   <div class="card"> 
     <div class="card-body">
-      <form action="{{route('admin.submit.add.news')}}" method="post" enctype="multipart/form-data" id="addNewsForm">
-      @csrf
+      <form action="{{route('admin.submit.add.news')}}" method="post" enctype="multipart/form-data" id="editNewsForm">
+        @csrf
+        <input type="hidden" name="news_id" value="{{$news[0]->id}}">
       	<div class="row"> 
           <div class="col-lg-4">
 
         	    <div class="form-group">
                 <label for="title">Title</label>
-                <input type="text" class="form-control" name="title" id="title" placeholder="Title">
+                <input type="text" class="form-control" name="title" id="title" placeholder="Title" value="{{$news[0]->title}}">
               </div>  
 
               <div class="row">
                  <div class="col-md-6">
                     <div class="form-group">
-                      <label for="category">Category</label>
+                      <label for="category">Category {{$news[0]->category_id}}</label>
                       <select class="custom-select rounded-0" id="category" name="category">
                         <option value="">Select Category</option>
-                        @forelse($categoris as $category)
-                            <option value="{{$category->id}}">{{$category->category_title}}</option>
+                        @forelse($categoris as $category)                            
+                            <option value="{{$category->id}}" @selected($category->id == $news[0]->category_id)>{{$category->category_title}}</option>
                         @empty
                             <option value="">Category not found</option>
                         @endforelse                 
@@ -36,7 +37,11 @@
                     <div class="form-group">
                       <label for="sub_category">Sub Category</label>
                       <select class="custom-select rounded-0" id="sub_category" name="sub_category">
-                        <option value="">Select Sub Category</option>                    
+                        @forelse($subCategories as $subCategory)                            
+                            <option value="{{$subCategory->id}}" @selected($subCategory->id == $news[0]->sub_category_id)>{{$subCategory->title}}</option>
+                        @empty
+                            <option value="">Category not found</option>
+                        @endforelse                 
                       </select>
                     </div>
                  </div>
@@ -47,7 +52,7 @@
                    <div class="form-group">
                       <label>Publish Date</label>
                       <div class="input-group date" id="publish_date" data-target-input="nearest">
-                        <input type="text" class="form-control datetimepicker-input" data-target="#publish_date" name="publishDate" id="publishDate" />
+                        <input type="text" class="form-control datetimepicker-input" data-target="#publish_date" name="publishDate" id="publishDate" value="{{$news[0]->publish_date}}" />
                         <div class="input-group-append" data-target="#publish_date" data-toggle="datetimepicker">
                             <div class="input-group-text"><i class="fa fa-calendar"></i></div>
                         </div>
@@ -59,7 +64,7 @@
                     <div class="form-group">
                       <label>Publish Time</label>
                       <div class="input-group date" id="timepicker" data-target-input="nearest">
-                        <input type="text" class="form-control datetimepicker-input" data-target="#timepicker" name="publishTime" id="publishTime"/>
+                        <input type="text" class="form-control datetimepicker-input" data-target="#timepicker" name="publishTime" id="publishTime" value="{{$news[0]->publish_time}}" />
                         <div class="input-group-append" data-target="#timepicker" data-toggle="datetimepicker">
                             <div class="input-group-text"><i class="far fa-clock"></i></div>
                         </div>
@@ -74,8 +79,8 @@
                       <div class="form-group">
                         <label for="status">Status (Publish)</label>
                         <select class="custom-select rounded-0" id="status" name="status">
-                          <option value="1">Publish</option>
-                          <option value="0">Draft</option>                    
+                          <option value="1" @selected($news[0]->status == 1) >Publish</option>
+                          <option value="0" @selected($news[0]->status == 0)>Draft</option>                    
                         </select>
                       </div>     
                  </div>
@@ -83,7 +88,7 @@
                      <div class="form-group">
                         <label>Publish End Date</label>
                         <div class="input-group date" id="publish_end_date" data-target-input="nearest">
-                          <input type="text" class="form-control datetimepicker-input" data-target="#publish_end_date" name="publishEndDate" id="publishEndDate" />
+                          <input type="text" class="form-control datetimepicker-input" data-target="#publish_end_date" name="publishEndDate" id="publishEndDate" value="{{$news[0]->publish_end_date}}"/>
                           <div class="input-group-append" data-target="#publish_end_date" data-toggle="datetimepicker">
                               <div class="input-group-text"><i class="fa fa-calendar"></i></div>
                           </div>
@@ -97,27 +102,32 @@
                     <input type="file" class="custom-file-input" id="thumbnail" name="thumbnail"> 
                     <label class="custom-file-label" for="thumbnail">Thumbnail Img</label>
                   </div>
-              </div>
+                  @if(!is_null($news[0]->thumbnail))                      
+                      <img src="{{asset('image/'.$news[0]->thumbnail)}}" width="80" class="img-thumbnail">
+                  @else
+                      <p class="text-info">Image not upload</p>
+                  @endif                  
+              </div>              
 
               <div class="form-group">
                 <label for="title">Meta Title</label>
-                <input type="text" class="form-control" name="meta_title" id="meta_title" placeholder="Meta Title">
+                <input type="text" class="form-control" name="meta_title" id="meta_title" placeholder="Meta Title" value="{{$news[0]->meta_title}}">
               </div>            
 
               <div class="form-group">
                 <label>Meta Keyword (comma seprated)</label>
-                <textarea class="form-control" rows="2" name="meta_keyword" id="meta_keyword" placeholder="Meta Keyword"></textarea>
+                <textarea class="form-control" rows="2" name="meta_keyword" id="meta_keyword" placeholder="Meta Keyword">{{$news[0]->meta_keywords}}</textarea>
               </div>  
               <div class="form-group">
                 <label>Meta Description</label>
-                <textarea class="form-control" rows="2" name="meta_description" placeholder="Meta Description"></textarea>
+                <textarea class="form-control" rows="2" name="meta_description" placeholder="Meta Description">{{$news[0]->meta_description}}</textarea>
               </div>     
               
           </div>          
           <div class="col-lg-8">                                     
               <div class="form-group">
                   <label>Content</label>
-                  <textarea class="form-control" rows="2" name="description" id="description" placeholder="Content"></textarea>
+                  <textarea class="form-control" rows="2" name="description" id="description" placeholder="Content">{{$news[0]->description}}</textarea>
               </div>                
               <button type="submit" class="btn btn-dark btn-block">Submit</button>              
           </div>      
@@ -188,8 +198,13 @@ $(document).ready(function(){
            $.ajax({
                url: url,
                method: 'get',
-               dataType: 'JSON',                                             
-               success: function(response){                                                   
+               dataType: 'JSON',                              
+               beforSend: function(){
+                  console.log("ajax request send");
+               },
+               success: function(response){
+                  //console.log(response);
+                                 
                   if(response.status){                     
                      let subCategory = response.data;                     
                      let option;
@@ -224,7 +239,7 @@ $(document).ready(function(){
 
     });
 
-    const newsValidator = new JustValidate('#addNewsForm', {
+    const newsValidator = new JustValidate('#editNewsForm', {
          errorFieldCssClass: 'is-invalid', // class added to invalid fields
          successFieldCssClass: 'is-valid', // class added to valid fields
     });
@@ -255,17 +270,20 @@ $(document).ready(function(){
        let formData = new FormData(form);  
 
        $.ajax({
-           url: '{{route("admin.submit.add.news")}}',
+           url: '{{route("admin.submit.edit.news")}}',
            method: 'post',
            //dataType: 'JSON',
            data: formData,
            contentType: false,
            processData: false,
            beforeSend: function(){                           
-              showBtnProcess('#addNewsForm button');
+              //showBtnProcess('#editNewsForm button');
            },
-           success: function(response){                
-              hideBtnProcess('#addNewsForm button');              
+           success: function(response){
+              console.log(response);    
+              return false;
+
+              hideBtnProcess('#editNewsForm button');              
               if(response.status){
                  event.target.reset();
                  newsValidator.refresh();
@@ -282,7 +300,7 @@ $(document).ready(function(){
            },
            error: function(error){
               console.log(error);
-              hideBtnProcess('#addNewsForm button');
+              hideBtnProcess('#editNewsForm button');
               Toast.fire({
                  icon: 'error',
                  title: 'Technical Error! Contact to developers'

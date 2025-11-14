@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Str;
 use Carbon\Carbon;
+use Illuminate\Database\Eloquent\Casts\Attribute;
 
 class News extends Model
 {
@@ -35,21 +36,36 @@ class News extends Model
 
         static::creating(function($news){            
             //generate slug
-            $news->slug = Str::slug($news->title);
-            
-            //convert date 
-            $news->publish_date = Carbon::createFromFormat('m/d/Y', $news->publish_date)->format("Y-m-d");
-            
-            //convert time
-            $news->publish_time = Carbon::createFromFormat('g:i A', $news->publish_time)->format('H:i:s');                    
+            $news->slug = Str::slug($news->title);            
         });
 
         static::updating(function ($news) {
             // If the title was changed, regenerate the slug
             if ($news->isDirty('title')) {
-                $news->slug = Str::slug($news->category_title);
+                $news->slug = Str::slug($news->title);
             }
         });        
         
     }
+
+    protected function publishDate(): Attribute{
+        return Attribute::make(
+            get: fn ($value) => $value ? Carbon::parse($value)->format('m/d/Y') : null,
+            set: fn ($value) => $value ? Carbon::createFromFormat('m/d/Y', $value)->format('Y-m-d') : null
+        );
+    }
+
+    protected function publishTime(): Attribute{
+        return Attribute::make(
+            get: fn ($value) => $value ? Carbon::parse($value)->format('g:i A') : null,
+            set: fn ($value) => $value ? Carbon::createFromFormat('g:i A', $value)->format('H:i:s') : null
+        );
+    }
+
+    protected function publishEndDate(): Attribute{
+        return Attribute::make(
+            get: fn ($value) => $value ? Carbon::parse($value)->format('m/d/Y') : null,
+            set: fn ($value) => $value ? Carbon::createFromFormat('m/d/Y', $value)->format('Y-m-d') : null
+        );
+    }    
 }

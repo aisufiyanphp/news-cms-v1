@@ -1,2 +1,5 @@
-write on chatgpt (Continue my News CMS project) when new day first come so chatgpt remember project           
+write on chatgpt (Continue my News CMS project) when new day first come so chatgpt remember project      
+
+"SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'Tes' for key 'news_title_unique' (Connection: mysql, SQL: insert into `news` (`title`, `category_id`, `sub_category_id`, `publish_date`, `publish_time`, `status`, `publish_end_date`, `thumbnail`, `meta_title`, `meta_keywords`, `meta_description`, `description`, `slug`, `updated_at`, `created_at`) values (Tes, 4, 4, 2025-11-13, 18:31:00, 1, ?, ?, Tes, Tes, Tes, <p>Tes</p>, tes, 2025-11-13 13:17:02, 2025-11-13 13:17:02))"
+     
            

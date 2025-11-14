@@ -52,6 +52,7 @@ Route::prefix('admin')->group(function(){
       Route::get('add-news', [NewsController::class, "addNews"])->name('admin.add.news');
       Route::post('add-news', [NewsController::class, "submitAddNews"])->name('admin.submit.add.news');
       Route::get('edit-news/{id}', [NewsController::class, "editNews"])->name('admin.edit.news')->whereNumber('id');
+      Route::post('edit-news', [NewsController::class, "submitEditNews"])->name('admin.submit.edit.news');
   }); 
   
 });
