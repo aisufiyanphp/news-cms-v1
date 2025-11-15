@@ -91,7 +91,8 @@ class NewsController extends Controller
         
     }
 
-    public function submitEditNews(Request $request){               
+    public function submitEditNews(Request $request){
+                   
         $validator = Validator::make($request->all(), [
             "news_id" => "required|integer|exists:news,id",
             "title" => "required|min:3|max:80|unique:news,title,".$request->input('news_id').",id",
@@ -152,6 +153,14 @@ class NewsController extends Controller
             $result = ["status" => false, "msg"=> $e->getMessage()];
             return response()->json($result);
         }
+    }
+
+    public function newsDetail($id){
+        $news = News::find($id);
+        if($news){
+           return view('admin.news.news_detail', compact('news'));
+        }        
+        return redirect()->back();
     }
 
 

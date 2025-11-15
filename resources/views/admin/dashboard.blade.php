@@ -12,7 +12,7 @@
         <!-- small box -->
         <div class="small-box bg-info">
           <div class="inner">
-            <h3>{{$data['category']}}</h3>
+            <h3>{{$data['count_category']}}</h3>
 
             <p>Category</p>
           </div>
@@ -28,7 +28,7 @@
         <div class="small-box bg-success">
           <div class="inner">
             <!-- <h3>53<sup style="font-size: 20px">%</sup></h3> -->
-            <h3>{{$data['sub_category']}}</h3>
+            <h3>{{$data['count_sub_category']}}</h3>
 
             <p>Sub Category</p>
           </div>
@@ -43,9 +43,9 @@
         <!-- small box -->
         <div class="small-box bg-warning">
           <div class="inner">
-            <h3>44</h3>
+            <h3>{{$data['count_news']}}</h3>
 
-            <p>User Registrations</p>
+            <p>News Artical</p>
           </div>
           <div class="icon">
             <i class="ion ion-person-add"></i>

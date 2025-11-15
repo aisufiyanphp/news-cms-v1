@@ -49,15 +49,22 @@ Route::prefix('admin')->group(function(){
       
       //news 
       Route::get('news', [NewsController::class, "news"])->name('admin.news.list');
+      Route::get('news-detail/{id}', [NewsController::class, "newsDetail"])->name('admin.news.detail')->whereNumber('id');
       Route::get('add-news', [NewsController::class, "addNews"])->name('admin.add.news');
       Route::post('add-news', [NewsController::class, "submitAddNews"])->name('admin.submit.add.news');
       Route::get('edit-news/{id}', [NewsController::class, "editNews"])->name('admin.edit.news')->whereNumber('id');
       Route::post('edit-news', [NewsController::class, "submitEditNews"])->name('admin.submit.edit.news');
+
+      Route::post('upload-thumbnail', [DashboardController::class, "uploadThumbnail"])->name('admin.upload.thumbnail');
   }); 
   
 });
 
 Route::fallback(function () {
+
+   if (request()->is('api/*')) {
+        return response()->json(['message' => 'API route not found'], 404);
+} 
    return redirect()->route('admin.login');
 });
 

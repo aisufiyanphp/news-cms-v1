@@ -40,8 +40,12 @@
 		          	  <span class="badge badge-success">{{$news->status}}</span>
 		          	</td>
 		          	<td>
-		          		 <a href="{{route('admin.edit.news', ['id'=>$news->id])}}" class="btn btn-outline-primary btn-sm" title="Edit Category">
+		          		 <a href="{{route('admin.edit.news', ['id'=>$news->id])}}" class="btn btn-outline-primary btn-sm" title="Edit News">
 			               	<i class="fas fa-edit"></i>
+			             </a>
+			             &nbsp;
+			             <a href="{{route('admin.news.detail', ['id'=>$news->id])}}" class="btn btn-outline-info btn-sm" title="News Detail">
+			               	<i class="fas fa-eye"></i>
 			             </a>
 			             &nbsp;
 			             <a href="#" class="btn btn-outline-danger btn-sm" title="Add Category">

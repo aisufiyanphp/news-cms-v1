@@ -148,20 +148,29 @@
 <script src="{{asset('admin-assets/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js')}}"></script>
 <!-- Ckeditor -->
 <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
+<!-- <script src="https://cdn.ckeditor.com/4.21.0/full/ckeditor.js"></script> -->
+<!-- <script src="https://cdn.ckeditor.com/4.22.1/full/ckeditor.js"></script> -->
+
 <!-- just validate -->
 <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
 @endpush
 
 @push('bottom_scripts')
 <script>
-ClassicEditor
-  .create(document.querySelector('#description'), {
+  ClassicEditor.create(document.querySelector('#description'), {
     ckfinder: {
-      //{{--uploadUrl: "{{ route('admin.news.upload-image').'?_token='.csrf_token() }}"--}}
-    }
+      uploadUrl: "{{ route('admin.upload.thumbnail').'?_token='.csrf_token() }}"
+    },
+
   }).catch(error => {
     console.error(error);
   });
+
+  // CKEDITOR.replace('description', {
+  //     height: 500,
+  //     filebrowserUploadUrl: "{{ route('admin.upload.thumbnail') }}?_token={{ csrf_token() }}",
+  //     filebrowserUploadMethod: 'form'
+  // });  
 </script>
 
 <script>
