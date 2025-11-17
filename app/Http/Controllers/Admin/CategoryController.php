@@ -6,18 +6,18 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\Rule;
-use  App\Models\Category;
-use  App\Models\SubCategory;
+use App\Models\CategoryModel;
+use App\Models\SubCategoryModel;
 
 class CategoryController extends Controller
 {    
     public function category(){
-        $categories = Category::getCategory();
-        return view('admin.category', compact('categories'));
+        $categories = CategoryModel::getCategory();
+        return view('admin.category.category', compact('categories'));
     }
 
     public function addCategory(){
-        return view('admin.add_category');
+        return view('admin.category.add_category');
     }
 
     public function submitCategory(Request $request){        
@@ -36,7 +36,7 @@ class CategoryController extends Controller
         }
         try{
 
-            $category = Category::create([
+            $category = CategoryModel::create([
                'category_title' => $request->input('title'),
                'description' => $request->input('description'),
                'status' => $request->input('status'),
@@ -56,9 +56,9 @@ class CategoryController extends Controller
     }
 
     public function editCategory($id){
-        $category = Category::getCategory($id);
+        $category = CategoryModel::getCategory($id);
         if(count($category) > 0){
-           return view('admin.edit_category', compact('category'));    
+           return view('admin.category.edit_category', compact('category'));    
         }
         return redirect()->back();
         
@@ -82,7 +82,7 @@ class CategoryController extends Controller
         try{
 
             $id = $request->input('category_id');
-            $category = Category::findOrFail($id);
+            $category = CategoryModel::findOrFail($id);
 
             $category->update([
                 'category_title'   => $request->title,
@@ -103,14 +103,14 @@ class CategoryController extends Controller
     
     //Sub Category
     public function subCategory(){     
-        $subCategories = SubCategory::with('category:id,category_title')->orderBy('id', 'desc')->get();                
-        return view('admin.sub_category', compact('subCategories'));
+        $subCategories = SubCategoryModel::with('category:id,category_title')->orderBy('id', 'desc')->get();                
+        return view('admin.category.sub_category', compact('subCategories'));
     }
 
     public function allSubCategory(Request $request, $id){
         if($request->ajax()){
-            $category = Category::getCategory($id);
-            $subCategories = SubCategory::where("category_id", $id)->get(["id", "title"]);  
+            $category = CategoryModel::getCategory($id);
+            $subCategories = SubCategoryModel::where("category_id", $id)->get(["id", "title"]);  
             if(count($subCategories) > 0){
                 $result = ["status"=>true, "msg"=>ucwords($category[0]->category_title)." Sub Category list", "data"=>$subCategories];
                 return response()->json($result); 
@@ -119,18 +119,18 @@ class CategoryController extends Controller
                 return response()->json($result); 
             }   
         }else{            
-            $category = Category::getCategory($id, "category_title");            
-            $subCategories = SubCategory::where("category_id", $id)->get();        
+            $category = CategoryModel::getCategory($id, "category_title");            
+            $subCategories = SubCategoryModel::where("category_id", $id)->get();        
             if(count($subCategories) > 0){
-               return view('admin.all_sub_category', compact('subCategories', 'category'));
+               return view('admin.category.all_sub_category', compact('subCategories', 'category'));
             }
             return redirect()->back();
         }        
     }
 
     public function addSubCategory(){        
-        $categories = Category::getCategory();
-        return view('admin.add_sub_category', compact('categories'));
+        $categories = CategoryModel::getCategory();
+        return view('admin.category.add_sub_category', compact('categories'));
     }
 
     public function submitAddSubCategory(Request $request){                
@@ -156,7 +156,7 @@ class CategoryController extends Controller
         }
         try{
                         
-            $category = SubCategory::create([
+            $category = SubCategoryModel::create([
                'title' => $request->input('title'),
                'category_id' => $request->input('category'),
                'description' => $request->input('description'),
@@ -177,10 +177,10 @@ class CategoryController extends Controller
     }
 
     public function editSubCategory($id){        
-        $categories = Category::getCategory();    
-        $subCategory = SubCategory::where('id', $id)->get();
+        $categories = CategoryModel::getCategory();    
+        $subCategory = SubCategoryModel::where('id', $id)->get();
         if(count($subCategory) > 0){
-           return view('admin.edit_sub_category', compact('categories', 'subCategory'));    
+           return view('admin.category.edit_sub_category', compact('categories', 'subCategory'));    
         }    
         return redirect()->back();
         

@@ -4,15 +4,15 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Category;
-use App\Models\SubCategory;
+use App\Models\CategoryModel;
+use App\Models\SubCategoryModel;
 use App\Models\News;
 
 class DashboardController extends Controller
 {
-    public function dashboard(){
-        $data['count_category'] = Category::count();
-        $data['count_sub_category'] = SubCategory::count();
+    public function dashboard(){        
+        $data['count_category'] = CategoryModel::count();
+        $data['count_sub_category'] = SubCategoryModel::count();
         $data['count_news'] = News::count();        
         return view('admin.dashboard', compact('data'));
     }

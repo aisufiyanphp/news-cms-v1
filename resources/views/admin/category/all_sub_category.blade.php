@@ -24,7 +24,7 @@
 		            <th>Desc</th>		            
 		            <th>M. Title</th>
 		            <th>M. Keyword</th>
-		            <th>M. Desc</th>
+		            <th>Order</th>
 		            <th>Status</th>
 		            <th>Action</th>
 		          </tr>
@@ -37,7 +37,7 @@
 		          	<td>{{$subCategory->description}}</td>
 		          	<td>{{$subCategory->meta_title}}</td>
 		          	<td>{{$subCategory->meta_keywords}}</td>
-		          	<td>{{$subCategory->meta_description}}</td>
+		          	<td>{{$subCategory->order}}</td>
 		          	<td>
 		          		@if($subCategory->status)
 		          	     <span class="badge badge-success">Active</span>

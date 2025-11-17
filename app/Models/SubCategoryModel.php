@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Str;
 
-class SubCategory extends Model
+class SubCategoryModel extends Model
 {
     use HasFactory, SoftDeletes;
 
@@ -42,6 +42,6 @@ class SubCategory extends Model
     }
 
     public function category(){
-        return $this->belongsTo(Category::class, 'category_id');
+        return $this->belongsTo(CategoryModel::class, 'category_id');
     }
 }

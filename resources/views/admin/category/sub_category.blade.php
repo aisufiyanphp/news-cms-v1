@@ -1,8 +1,8 @@
 @extends('admin.layout.layout')
 
-@section('title', 'Category :: News CMS V1')
+@section('title', 'Sub Category :: News CMS V1')
 
-@section('page-title', 'Category')
+@section('page-title', 'Sub Category')
 
 @section('content')
 <div class="container-fluid">
@@ -10,7 +10,7 @@
 	  <div class="col-12">	    
 	    <div class="card">
 	      <div class="card-header text-right">
-            <a href="{{route('admin.add.category')}}" class="btn btn-outline-primary" title="Add Category">
+            <a href="{{route('admin.add.sub.category')}}" class="btn btn-outline-primary" title="Add Category">
             	<i class="nav-icon fas fa-plus"></i>
             </a>  	      	
 	      </div>
@@ -21,41 +21,45 @@
 		          <tr>
 		            <th>#</th>
 		            <th>Title</th>
+		            <th>Category</th>
 		            <th>Desc</th>		            
 		            <th>M. Title</th>
 		            <th>M. Keyword</th>
-		            <th>M. Desc</th>
+		            <th>Order</th>
 		            <th>Status</th>
 		            <th>Action</th>
 		          </tr>
 	          </thead>
 	          <tbody>
-	          	@foreach($categories as $category)
-                <tr>
-	                <td>{{$loop->iteration}}</td>
-			          	<td>{{$category->category_title}}</td>
-			          	<td>{{$category->description}}</td>
-			          	<td>{{$category->meta_title}}</td>
-			          	<td>{{$category->meta_keywords}}</td>
-			          	<td>{{$category->meta_description}}</td>
-			          	<td>
-			          		@if($category->status)
-			          	    <span class="badge badge-success">Active</span>
-			          	  @else
-			          	    <span class="badge badge-danger">Deactive</span>
-			          	  @endif
-			          	</td>
-			          	<td>
-			          		 <a href="{{route('admin.edit.category', ['id'=>$category->id])}}" class="btn btn-outline-primary btn-sm" title="Edit Category">
-				               	<i class="fas fa-edit"></i>
-				             </a>
-				             &nbsp;
-				             <a href="{{route('admin.add.category')}}" class="btn btn-outline-danger btn-sm" title="Delete Category">
-				               	<i class="fas fa-trash"></i>
-				             </a> 		          		 
-			          	</td>
-                </tr>  
-	          	@endforeach		          
+	          	@foreach($subCategories as $subCategory)
+		          <tr>
+		          	<td>{{$loop->iteration}}</td>
+		          	<td>{{$subCategory->title}}</td>
+		          	<td>
+		          		 <a href="{{route('admin.all.sub.category', ['id'=>$subCategory->category_id])}}" title='{{$subCategory["category"]->category_title}}'>{{$subCategory["category"]->category_title}}</a>
+		            </td>
+		          	<td>{{$subCategory->description}}</td>
+		          	<td>{{$subCategory->meta_title}}</td>
+		          	<td>{{$subCategory->meta_keywords}}</td>
+		          	<td>{{$subCategory->order}}</td>
+		          	<td>
+		          		@if($subCategory->status)
+		          	     <span class="badge badge-success">Active</span>
+		          	  @else
+		          	     <span class="badge badge-danger">Deactive</span>
+		          	  @endif
+		          	</td>
+		          	<td>
+		          		 <a href="{{route('admin.edit.sub.category', ['id'=>$subCategory->id])}}" class="btn btn-outline-primary btn-sm" title="Edit Sub Category">
+			               	<i class="fas fa-edit"></i>
+			             </a>
+			             &nbsp;
+			             <a href="#" class="btn btn-outline-danger btn-sm" title="Delete Sub Category">
+			               	<i class="fas fa-trash"></i>
+			             </a> 		          		 
+		          	</td>
+		          </tr>
+		          @endforeach
 	          </tbody>	         
 	        </table>
 	      </div>
@@ -95,6 +99,7 @@
 @push('bottom_scripts')
 <script>
   $(function () {
+
     $("#example1").DataTable({
       "responsive": true,
       "lengthChange": true, 

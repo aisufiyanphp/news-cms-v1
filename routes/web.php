@@ -65,10 +65,6 @@ Route::prefix('admin')->group(function(){
 });
 
 Route::fallback(function () {
-
-   if (request()->is('api/*')) {
-        return response()->json(['message' => 'API route not found'], 404);
-} 
    return redirect()->route('admin.login');
 });
 

@@ -5,8 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
-use App\Models\Category;
-use App\Models\SubCategory;
+use App\Models\CategoryModel;
+use App\Models\SubCategoryModel;
 use App\Models\News;
 
 
@@ -18,7 +18,7 @@ class NewsController extends Controller
     }
 
     public function addNews(){
-        $categoris = Category::getCategory();                                        
+        $categoris = CategoryModel::getCategory();                                        
         return view('admin.news.add_news', compact('categoris'));
     }
 
