@@ -17,10 +17,6 @@ class DashboardController extends Controller
         return view('admin.dashboard', compact('data'));
     }
 
-    public function settings(){
-        return view('admin.setting');
-    }
-
     public function uploadThumbnail(Request $request){
         if($request->hasFile('upload')){
                 
