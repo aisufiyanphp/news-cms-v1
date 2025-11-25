@@ -12,8 +12,7 @@ use App\Http\Middleware\AdminGuest;
 
 
 Route::get('test', function () {
-    $session = session()->all();
-    debug($session);
+    debug(getSetting('logo'));
 });
 
 // admin route start here
@@ -54,6 +53,9 @@ Route::prefix('admin')->group(function(){
       //news 
       Route::get('news', [NewsController::class, "news"])->name('admin.news.list');
       Route::get('news-detail/{id}', [NewsController::class, "newsDetail"])->name('admin.news.detail')->whereNumber('id');
+
+      Route::post('get-news-by', [NewsController::class, 'getNews'])->name('admin.get.news');
+
       Route::get('add-news', [NewsController::class, "addNews"])->name('admin.add.news');
       Route::post('add-news', [NewsController::class, "submitAddNews"])->name('admin.submit.add.news');
       Route::get('edit-news/{id}', [NewsController::class, "editNews"])->name('admin.edit.news')->whereNumber('id');
@@ -62,6 +64,11 @@ Route::prefix('admin')->group(function(){
       Route::post('upload-thumbnail', [DashboardController::class, "uploadThumbnail"])->name('admin.upload.thumbnail');            
   }); 
   
+});
+
+//frontend side
+Route::get('/', function(){
+   return view('home');
 });
 
 Route::fallback(function () {

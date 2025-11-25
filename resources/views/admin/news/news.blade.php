@@ -16,7 +16,7 @@
 	      </div>
 	      <!-- /.card-header -->
 	      <div class="card-body">
-	        <table id="example1" class="table">
+	        <table id="NewsTalbe" class="table">
 	          <thead>
 		          <tr>
 		            <th>#</th>
@@ -29,7 +29,7 @@
 		          </tr>
 	          </thead>
 	          <tbody>
-	          	@foreach($newsList as $news)
+	          	{{--@foreach($newsList as $news)
 	          	<tr>
 		          	<td>{{$loop->iteration}}</td>
 		          	<td>{{$news->title}}</td>
@@ -53,7 +53,7 @@
 			             </a> 		          		 
 		          	</td>
 		          </tr>	          	
-	          	@endforeach		          
+	          	@endforeach--}}		          
 	          </tbody>	         
 	        </table>
 	      </div>
@@ -94,14 +94,73 @@
 <script>
   $(function () {
 
-    $("#example1").DataTable({
+  	
+    var detailUrl = "{{ url('admin/news/detail') }}/";
+
+    $("#NewsTalbe").DataTable({
       "responsive": true,
       "lengthChange": true, 
       "autoWidth": true,      
-      "ordering": false,
-      //"buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-    });
-    //.buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+      "ordering": false,      
+      'processing': true,
+      'serverSide': true,
+      ajax: {
+      	 url: "{{route('admin.get.news')}}",
+      	 type: "post",
+      	 data: {_token: "{{csrf_token()}}"},
+      	 dataSrc: function (json) {
+            //console.log(json); // <-- PRINT HERE
+            return json.data;
+         },
+         error: function(error){
+         	  console.log(error);
+         }               	
+      }, 
+      columns: [
+       	  {data: null, 
+       	    render: function (data, type, row, meta) {               
+               return meta.row + 1; 
+            }
+          },
+       	  {data: 'title'},
+       	  {data:'category.category_title'},
+       	  {data:'sub_category.title'},       	  
+       	  {
+       	  	data: null, 
+       	  	render: function(data, type, row, meta){
+                return row.publish_date+" "+row.publish_time;
+       	  	}
+       	  },
+       	  {
+       	    data:'status',
+       	    render: function(status){
+               return status == 1 ? '<span class="badge badge-success">Publish</span>' : '<span class="badge badge-danger">Draft</span>';
+       	    }
+       	  },
+       	  { 
+       	  	data: 'id',
+       	  	orderable: false, 
+       	  	searchable: false,
+       	  	render: function(id){
+       	  		  let editUrl = "{{ url('admin/edit-news') }}/";
+       	  		  let viewUrl = "{{ url('admin/news-detail') }}/";
+                return `
+                  <a href="${editUrl}${id}" class="btn btn-outline-primary btn-sm" title="Edit News">
+			               	<i class="fas fa-edit"></i>
+			            </a>
+			            &nbsp;
+			            <a href="${viewUrl}${id}" class="btn btn-outline-info btn-sm" title="View News">
+			               	<i class="fas fa-eye"></i>
+			            </a>
+			            &nbsp;
+			            <a href="#" class="btn btn-outline-danger btn-sm" title="Delete News">
+			               	<i class="fas fa-trash"></i>
+			            </a>
+               `;
+       	  	} 
+       	  }
+      ]
+    });    
 
   });
 </script>

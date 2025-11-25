@@ -1,4 +1,5 @@
 <?php 
+use App\Models\SettingModel;
 
 if(!function_exists('debug')){	
 	function debug($args, $stop=true){
@@ -29,6 +30,19 @@ if(!function_exists('fileDelete')){
       if(file_exists($file)){
          unlink($file);
       }
+  }
+}
+
+if(!function_exists('getSetting')){  
+  function getSetting($key=null){
+      if(is_null($key)){
+         $setting = SettingModel::pluck('value', 'key');
+      }else{
+         $setting = SettingModel::whereIn('key', [$key])
+            ->pluck('value', 'key');  
+         $setting = $setting[$key];              
+      }
+      return $setting;
   }
 }
 

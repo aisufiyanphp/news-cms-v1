@@ -30,7 +30,15 @@ class News extends Model
         'meta_keywords',
         'meta_description',
         'deleted_at'
-    ];   
+    ];  
+
+    public function category(){
+        return $this->belongsTo(CategoryModel::class, 'category_id');
+    } 
+
+    public function subCategory(){
+        return $this->belongsTo(SubCategoryModel::class, 'sub_category_id');
+    }
 
     protected static function booted(){
 

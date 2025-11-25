@@ -75,12 +75,14 @@
                         <input type="file" class="custom-file-input" id="site_logo" name="site_logo"> 
                         <label class="custom-file-label" for="site_logo">Site Logo</label>
                       </div>
+                      <img src="{{ asset('image/logo/' . getSetting('logo')) }}" alt="{{getSetting('logo')}}" width="80" class="img-thumbnail">
                     </div>  
                     <div class="form-group mt-3">                    
                       <div class="custom-file">
                         <input type="file" class="custom-file-input" id="favicon" name="favicon"> 
                         <label class="custom-file-label" for="favicon">Site Favicon</label>
                       </div>
+                      <img src="{{ asset('image/logo/' . getSetting('favicon')) }}" alt="{{getSetting('favicon')}}" width="80" class="img-thumbnail">
                     </div>
 
                 </div>                                
@@ -159,8 +161,10 @@ $(document).ready(function(){
                    icon: 'success',
                    title: response.msg
                  });
-              }else{
-                 console.log("else execute");
+                 setTimeout(function(){
+                   window.location.reload();
+                 }, 3000);
+              }else{                 
                  Toast.fire({
                    icon: 'error',
                    title: response.msg

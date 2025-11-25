@@ -22,6 +22,34 @@ class NewsController extends Controller
         return view('admin.news.add_news', compact('categoris'));
     }
 
+    public function getNews(Request $request){
+        $draw = $request->input('draw');
+        $start = $request->input('start');    // offset
+        $length = $request->input('length');  // limit
+        $searchValue = $request->input('search.value');
+
+        $query = News::with(['category:id,category_title', 'subCategory:id,title']);
+
+        if(!empty($searchValue)) {
+            $query->where(function ($q) use ($searchValue) {
+                $q->where('title', 'like', "%$searchValue%");
+            });
+        }
+
+        $recordsTotal = News::count();
+        $recordsFiltered = $query->count();
+
+        // Pagination
+        $news = $query->skip($start)->take($length)->get();
+
+        return response()->json([
+            'draw' => intval($draw),
+            'recordsTotal' => $recordsTotal,
+            'recordsFiltered' => $recordsFiltered,
+            'data' => $news
+        ]); 
+    }
+
     public function submitAddNews(Request $request){                        
 
         $validator = Validator::make($request->all(), [
@@ -81,9 +109,9 @@ class NewsController extends Controller
     }
 
     public function editNews($id){        
-        $categoris = Category::getCategory();
+        $categoris = CategoryModel::getCategory();
         $news = News::where('id', $id)->get();
-        $subCategories = SubCategory::where('category_id', $news[0]->category_id)->orderBy('id', 'desc')->get();        
+        $subCategories = SubCategoryModel::where('category_id', $news[0]->category_id)->orderBy('id', 'desc')->get();        
         if(count($news) > 0){
            return view('admin.news.edit_news', compact('categoris', 'news', 'subCategories'));                                                    
         }
