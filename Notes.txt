@@ -1,5 +1,51 @@
 write on chatgpt (Continue my News CMS project) when new day first come so chatgpt remember project      
 
 "SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'Tes' for key 'news_title_unique' (Connection: mysql, SQL: insert into `news` (`title`, `category_id`, `sub_category_id`, `publish_date`, `publish_time`, `status`, `publish_end_date`, `thumbnail`, `meta_title`, `meta_keywords`, `meta_description`, `description`, `slug`, `updated_at`, `created_at`) values (Tes, 4, 4, 2025-11-13, 18:31:00, 1, ?, ?, Tes, Tes, Tes, <p>Tes</p>, tes, 2025-11-13 13:17:02, 2025-11-13 13:17:02))"
+
+
+<link rel="stylesheet" href="{{asset('front-assets/css/ticker-style.css')}}">
+<link rel="stylesheet" href="{{asset('front-assets/css/flaticon.css')}}">
+<link rel="stylesheet" href="{{asset('front-assets/css/slicknav.css')}}">
+<link rel="stylesheet" href="{{asset('front-assets/css/animate.min.css')}}">
+<link rel="stylesheet" href="{{asset('front-assets/css/magnific-popup.css')}}">
+<link rel="stylesheet" href="{{asset('front-assets/css/fontawesome-all.min.css')}}">
+<link rel="stylesheet" href="{{asset('front-assets/css/themify-icons.css')}}">
+<link rel="stylesheet" href="{{asset('front-assets/css/slick.css')}}">
+<link rel="stylesheet" href="{{asset('front-assets/css/nice-select.css')}}">
+
+<!-- Jquery Mobile Menu -->
+<script src="{{asset('front-assets/js/jquery.slicknav.min.js')}}"></script>
+
+<!-- Jquery Slick , Owl-Carousel Plugins -->
+<script src="{{asset('front-assets/js/owl.carousel.min.js')}}"></script>
+<script src="{{asset('front-assets/js/slick.min.js')}}"></script>
+
+<!-- Date Picker -->
+<script src="{{asset('front-assets/js/gijgo.min.js')}}"></script>
+
+<!-- One Page, Animated-HeadLin -->
+<script src="{{asset('front-assets/js/wow.min.js')}}"></script>
+<script src="{{asset('front-assets/js/animated.headline.js')}}"></script>
+<script src="{{asset('front-assets/js/jquery.magnific-popup.js')}}"></script>
+
+<!-- Breaking New Pluging -->
+<script src="{{asset('front-assets/js/jquery.ticker.js')}}"></script>
+<script src="{{asset('front-assets/js/site.js')}}"></script>
+
+<!-- Scrollup, nice-select, sticky -->
+<script src="{{asset('front-assets/js/jquery.scrollUp.min.js')}}"></script>
+<script src="{{asset('front-assets/js/jquery.nice-select.min.js')}}"></script>
+<script src="{{asset('front-assets/js/jquery.sticky.js')}}"></script>
+
+<!-- contact js -->
+<script src="{{asset('front-assets/js/contact.js')}}"></script>
+<script src="{{asset('front-assets/js/jquery.form.js')}}"></script>
+<script src="{{asset('front-assets/js/jquery.validate.min.js')}}"></script>
+<script src="{{asset('front-assets/js/mail-script.js')}}"></script>
+<script src="{{asset('front-assets/js/jquery.ajaxchimp.min.js')}}"></script>
+
+<!-- Jquery Plugins, main Jquery -->	
+<script src="{{asset('front-assets/js/plugins.js')}}"></script>
+<script src="{{asset('front-assets/js/main.js')}}"></script>
      
            

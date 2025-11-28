@@ -10,7 +10,7 @@
       <div class="col-lg-4 col-md-8">        
         <div class="card card-dark">                    
           <!-- form start -->
-          <form action="" method="post" id="addSubCategoryForm">
+          <form action="" method="post" id="addSubCategoryForm" enctype="multipart/form-data">
             @csrf
             <div class="card-body">            
           	    <div class="form-group">
@@ -44,7 +44,13 @@
                         </div>
                    </div>
                 </div>	              
-	              <div class="form-group">
+                <div class="form-group mt-2">                    
+                  <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="thumbnail" name="thumbnail"> 
+                    <label class="custom-file-label" for="thumbnail">Thumbnail Img (optional)</label>
+                  </div>                  
+                </div>              
+	            <div class="form-group">
 	                <label>Description</label>
 	                <textarea class="form-control" name="description" id="description" rows="2" placeholder="Description"></textarea>
                 </div>

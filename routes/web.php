@@ -7,13 +7,54 @@ use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ProfileController;
 use App\Http\Controllers\Admin\NewsController;
 use App\Http\Controllers\Admin\SettingController;
+use App\Http\Controllers\HomeController;
 use App\Http\Middleware\AdminAuth;
 use App\Http\Middleware\AdminGuest;
 
+use Illuminate\Support\Collection;
+    use Illuminate\Support\Facades\Lang;
+
 
 Route::get('test', function () {
-    debug(getSetting('logo'));
-});
+    // $arr = ['columns' => ['title' => ['first_title', 'second_title'], 'body' => ['first_body', 'second_body']]];    
+    // $collect = collect($arr);
+    // debug($collect, false);
+    // echo "<hr>";
+    // $collection = $collect->map(function($item){
+    //      if(isset($item['title'])){
+    //          debug($item['title'], false);
+    //          //return $item['title'];
+    //      }
+    //      if(isset($item['body'])){
+    //          debug($item['body'], false);
+    //          //return $item['body'];
+    //      }
+    //      if(isset($item['test'])){
+    //          debug($item['test'], false);
+    //          //return $item['test'];
+    //      }else{
+    //          echo "Test is not set";
+    //      }          
+    // });
+    // debug($collection);    
+
+    // Collection::macro('toLocale', function (string $locale) {
+    //     return $this->map(function (string $value) use ($locale) {
+    //         //return Lang::get($value, [], $locale);
+    //         return ($value === $locale) ? $value : "Not Matched";
+    //     });
+    // });
+     
+    // $collection = collect(['first', 'second']);
+     
+    // $translated = $collection->toLocale('en');
+    // debug($translated);
+
+    echo URL::signedRoute('unsubscribe', ['user' => 1])."<br>";
+    echo URL::signedRoute('unsubscribe', ['user' => 1], absolute: false);
+
+
+})->name('unsubscribe');
 
 // admin route start here
 Route::prefix('admin')->group(function(){
@@ -48,7 +89,7 @@ Route::prefix('admin')->group(function(){
       Route::get('add-sub-category', [CategoryController::class, 'addSubCategory'])->name('admin.add.sub.category');
       Route::post('add-sub-category', [CategoryController::class, 'submitAddSubCategory'])->name('admin.submit.add.sub.category');
       Route::get('edit-sub-category/{id}', [CategoryController::class, 'editSubCategory'])->name('admin.edit.sub.category')->whereNumber('id');
-      Route::post('edit-sub-category', [CategoryController::class, 'submiteditSubCategory'])->name('admin.submit.edit.sub.category');
+      Route::post('edit-sub-category', [CategoryController::class, 'submitEditSubCategory'])->name('admin.submit.edit.sub.category');
       
       //news 
       Route::get('news', [NewsController::class, "news"])->name('admin.news.list');
@@ -67,9 +108,7 @@ Route::prefix('admin')->group(function(){
 });
 
 //frontend side
-Route::get('/', function(){
-   return view('home');
-});
+Route::get('/', [HomeController::class, 'index']);
 
 Route::fallback(function () {
    return redirect()->route('admin.login');

@@ -20,6 +20,7 @@ class SubCategoryModel extends Model
         'description', 
         'status',
         'order',
+        'image',
         'meta_title',
         'meta_keywords',
         'meta_description',

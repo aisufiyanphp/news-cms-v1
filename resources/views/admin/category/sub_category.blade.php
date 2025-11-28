@@ -22,10 +22,11 @@
 		            <th>#</th>
 		            <th>Title</th>
 		            <th>Category</th>
-		            <th>Desc</th>		            
+		            <th>Desc</th>
+		            <th>Img</th>		            
 		            <th>M. Title</th>
 		            <th>M. Keyword</th>
-		            <th>Order</th>
+		            <!-- <th>Order</th> -->
 		            <th>Status</th>
 		            <th>Action</th>
 		          </tr>
@@ -39,9 +40,14 @@
 		          		 <a href="{{route('admin.all.sub.category', ['id'=>$subCategory->category_id])}}" title='{{$subCategory["category"]->category_title}}'>{{$subCategory["category"]->category_title}}</a>
 		            </td>
 		          	<td>{{$subCategory->description}}</td>
+		          	<td>
+		          		@if(!is_null($subCategory->image))
+		          		   <img src="{{asset('image/category-img/'.$subCategory->image)}}" width="60" class="img-thumbnail">
+		          		@endif
+		          	</td>
 		          	<td>{{$subCategory->meta_title}}</td>
 		          	<td>{{$subCategory->meta_keywords}}</td>
-		          	<td>{{$subCategory->order}}</td>
+		          	<!-- <td>{{$subCategory->order}}</td> -->
 		          	<td>
 		          		@if($subCategory->status)
 		          	     <span class="badge badge-success">Active</span>

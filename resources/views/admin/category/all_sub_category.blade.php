@@ -21,7 +21,8 @@
 		          <tr>
 		            <th>#</th>
 		            <th>Title</th>		            
-		            <th>Desc</th>		            
+		            <th>Desc</th>		 
+		            <th>img</th>		            
 		            <th>M. Title</th>
 		            <th>M. Keyword</th>
 		            <th>Order</th>
@@ -35,6 +36,9 @@
 		          	<td>{{$loop->iteration}}</td>
 		          	<td>{{$subCategory->title}}</td>		          	
 		          	<td>{{$subCategory->description}}</td>
+		          	<td>
+		          		<img src="{{asset('image/category-img/'.$subCategory->image)}}" width="60px" class="img-thumbnail">
+		          	</td>
 		          	<td>{{$subCategory->meta_title}}</td>
 		          	<td>{{$subCategory->meta_keywords}}</td>
 		          	<td>{{$subCategory->order}}</td>

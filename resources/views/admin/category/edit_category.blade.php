@@ -10,7 +10,7 @@
       <div class="col-lg-4 col-md-8">        
         <div class="card card-dark">                    
           <!-- form start -->
-          <form action="{{route('admin.submit.edit.category')}}" method="post" id="editCategoryForm">
+          <form action="{{route('admin.submit.edit.category')}}" method="post" id="editCategoryForm" enctype="multipart/form-data">
             @csrf
             <input type="hidden" name="category_id" value="{{$category[0]->id}}">            
             <div class="card-body">            
@@ -34,7 +34,16 @@
                           <input type="number" min="1" class="form-control" name="order" id="order" placeholder="Category Order" value="{{$category[0]->order}}">
                       </div>
                  </div>
-               </div>                 
+               </div>     
+               <div class="form-group mt-2">                    
+                  <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="thumbnail" name="thumbnail"> 
+                    <label class="custom-file-label" for="thumbnail">Thumbnail Img (optional)</label>
+                  </div>
+                  @if(!is_null($category[0]->image))
+                     <img src="{{asset('image/category-img/'.$category[0]->image)}}" width="60px" class="img-thumbnail">
+                  @endif
+               </div>                  
                <div class="form-group">
                   <label>Description</label>
                   <textarea class="form-control" name="description" id="description" rows="2" placeholder="Description">{{$category[0]->description}}</textarea>
@@ -93,7 +102,7 @@ $(document).ready(function(){
        $.ajax({
            url: '{{route("admin.submit.edit.category")}}',
            method: 'post',
-           dataType: 'JSON',
+           //dataType: 'JSON',
            data: formData,
            contentType: false,
            processData: false,
@@ -102,7 +111,7 @@ $(document).ready(function(){
            },
            success: function(response){
               console.log(response);
-              hideBtnProcess('#editCategoryForm button');              
+              hideBtnProcess('#editCategoryForm button');                                          
               if(response.status){                 
                  Toast.fire({
                    icon: 'success',

@@ -1,1090 +1,2488 @@
-<!doctype html>
-<html class="no-js" lang="zxx">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>News HTML-5 Template </title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="manifest" href="site.webmanifest">
-		<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
-
-		<!-- CSS here -->
-            <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-            <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-            <link rel="stylesheet" href="assets/css/ticker-style.css">
-            <link rel="stylesheet" href="assets/css/flaticon.css">
-            <link rel="stylesheet" href="assets/css/slicknav.css">
-            <link rel="stylesheet" href="assets/css/animate.min.css">
-            <link rel="stylesheet" href="assets/css/magnific-popup.css">
-            <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
-            <link rel="stylesheet" href="assets/css/themify-icons.css">
-            <link rel="stylesheet" href="assets/css/slick.css">
-            <link rel="stylesheet" href="assets/css/nice-select.css">
-            <link rel="stylesheet" href="assets/css/style.css">
-   </head>
-
-   <body>
-       
-    <!-- Preloader Start -->
-    <div id="preloader-active">
-        <div class="preloader d-flex align-items-center justify-content-center">
-            <div class="preloader-inner position-relative">
-                <div class="preloader-circle"></div>
-                <div class="preloader-img pere-text">
-                    <img src="assets/img/logo/logo.png" alt="">
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Preloader Start -->
-
-    <header>
-        <!-- Header Start -->
-       <div class="header-area">
-            <div class="main-header ">
-                <div class="header-top black-bg d-none d-md-block">
-                   <div class="container">
-                       <div class="col-xl-12">
-                            <div class="row d-flex justify-content-between align-items-center">
-                                <div class="header-info-left">
-                                    <ul>     
-                                        <li><img src="assets/img/icon/header_icon1.png" alt="">34ºc, Sunny </li>
-                                        <li><img src="assets/img/icon/header_icon1.png" alt="">Tuesday, 18th June, 2019</li>
-                                    </ul>
-                                </div>
-                                <div class="header-info-right">
-                                    <ul class="header-social">    
-                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                       <li> <a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                       </div>
-                   </div>
-                </div>
-                <div class="header-mid d-none d-md-block">
-                   <div class="container">
-                        <div class="row d-flex align-items-center">
-                            <!-- Logo -->
-                            <div class="col-xl-3 col-lg-3 col-md-3">
-                                <div class="logo">
-                                    <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="col-xl-9 col-lg-9 col-md-9">
-                                <div class="header-banner f-right ">
-                                    <img src="assets/img/hero/header_card.jpg" alt="">
-                                </div>
-                            </div>
-                        </div>
-                   </div>
-                </div>
-               <div class="header-bottom header-sticky">
-                    <div class="container">
-                        <div class="row align-items-center">
-                            <div class="col-xl-10 col-lg-10 col-md-12 header-flex">
-                                <!-- sticky -->
-                                    <div class="sticky-logo">
-                                        <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
-                                    </div>
-                                <!-- Main-menu -->
-                                <div class="main-menu d-none d-md-block">
-                                    <nav>                  
-                                        <ul id="navigation">    
-                                            <li><a href="index.html">Home</a></li>
-                                            <li><a href="categori.html">Category</a></li>
-                                            <li><a href="about.html">About</a></li>
-                                            <li><a href="latest_news.html">Latest News</a></li>
-                                            <li><a href="contact.html">Contact</a></li>
-                                            <li><a href="#">Pages</a>
-                                                <ul class="submenu">
-                                                    <li><a href="elements.html">Element</a></li>
-                                                    <li><a href="blog.html">Blog</a></li>
-                                                    <li><a href="single-blog.html">Blog Details</a></li>
-                                                    <li><a href="details.html">Categori Details</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </nav>
-                                </div>
-                            </div>             
-                            <div class="col-xl-2 col-lg-2 col-md-4">
-                                <div class="header-right-btn f-right d-none d-lg-block">
-                                    <i class="fas fa-search special-tag"></i>
-                                    <div class="search-box">
-                                        <form action="#">
-                                            <input type="text" placeholder="Search">
-                                            
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Mobile Menu -->
-                            <div class="col-12">
-                                <div class="mobile_menu d-block d-md-none"></div>
-                            </div>
-                        </div>
-                    </div>
-               </div>
-            </div>
-       </div>
-        <!-- Header End -->
-    </header>
-
-    <main>
-    <!-- Trending Area Start -->
-    <div class="trending-area fix">
-        <div class="container">
-            <div class="trending-main">
-                <!-- Trending Tittle -->
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="trending-tittle">
-                            <strong>Trending now</strong>
-                            <!-- <p>Rem ipsum dolor sit amet, consectetur adipisicing elit.</p> -->
-                            <div class="trending-animated">
-                                <ul id="js-news" class="js-hidden">
-                                    <li class="news-item">Bangladesh dolor sit amet, consectetur adipisicing elit.</li>
-                                    <li class="news-item">Spondon IT sit amet, consectetur.......</li>
-                                    <li class="news-item">Rem ipsum dolor sit amet, consectetur adipisicing elit.</li>
-                                </ul>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-8">
-                        <!-- Trending Top -->
-                        <div class="trending-top mb-30">
-                            <div class="trend-top-img">
-                                <img src="assets/img/trending/trending_top.jpg" alt="">
-                                <div class="trend-top-cap">
-                                    <span>Appetizers</span>
-                                    <h2><a href="details.html">Welcome To The Best Model Winner<br> Contest At Look of the year</a></h2>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Trending Bottom -->
-                        <div class="trending-bottom">
-                            <div class="row">
-                                <div class="col-lg-4">
-                                <div class="single-bottom mb-35">
-                                    <div class="trend-bottom-img mb-30">
-                                        <img src="assets/img/trending/trending_bottom1.jpg" alt="">
-                                    </div>
-                                    <div class="trend-bottom-cap">
-                                        <span class="color1">Lifestyple</span>
-                                        <h4><a href="details.html">Get the Illusion of Fuller Lashes by “Mascng.”</a></h4>
-                                    </div>
-                                </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="single-bottom mb-35">
-                                        <div class="trend-bottom-img mb-30">
-                                            <img src="assets/img/trending/trending_bottom2.jpg" alt="">
-                                        </div>
-                                        <div class="trend-bottom-cap">
-                                            <span class="color2">Sports</span>
-                                            <h4><h4><a href="details.html">Get the Illusion of Fuller Lashes by “Mascng.”</a></h4></h4>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="single-bottom mb-35">
-                                        <div class="trend-bottom-img mb-30">
-                                            <img src="assets/img/trending/trending_bottom3.jpg" alt="">
-                                        </div>
-                                        <div class="trend-bottom-cap">
-                                            <span class="color3">Travels</span>
-                                            <h4><a href="details.html"> Welcome To The Best Model Winner Contest</a></h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Riht content -->
-                    <div class="col-lg-4">
-                        <div class="trand-right-single d-flex">
-                            <div class="trand-right-img">
-                                <img src="assets/img/trending/right1.jpg" alt="">
-                            </div>
-                            <div class="trand-right-cap">
-                                <span class="color1">Concert</span>
-                                <h4><a href="details.html">Welcome To The Best Model Winner Contest</a></h4>
-                            </div>
-                        </div>
-                        <div class="trand-right-single d-flex">
-                            <div class="trand-right-img">
-                                <img src="assets/img/trending/right2.jpg" alt="">
-                            </div>
-                            <div class="trand-right-cap">
-                                <span class="color3">sea beach</span>
-                                <h4><a href="details.html">Welcome To The Best Model Winner Contest</a></h4>
-                            </div>
-                        </div>
-                        <div class="trand-right-single d-flex">
-                            <div class="trand-right-img">
-                                <img src="assets/img/trending/right3.jpg" alt="">
-                            </div>
-                            <div class="trand-right-cap">
-                                <span class="color2">Bike Show</span>
-                                <h4><a href="details.html">Welcome To The Best Model Winner Contest</a></h4>
-                            </div>
-                        </div> 
-                        <div class="trand-right-single d-flex">
-                            <div class="trand-right-img">
-                                <img src="assets/img/trending/right4.jpg" alt="">
-                            </div>
-                            <div class="trand-right-cap">
-                                <span class="color4">See beach</span>
-                                <h4><a href="details.html">Welcome To The Best Model Winner Contest</a></h4>
-                            </div>
-                        </div>
-                        <div class="trand-right-single d-flex">
-                            <div class="trand-right-img">
-                                <img src="assets/img/trending/right5.jpg" alt="">
-                            </div>
-                            <div class="trand-right-cap">
-                                <span class="color1">Skeping</span>
-                                <h4><a href="details.html">Welcome To The Best Model Winner Contest</a></h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Trending Area End -->
-    <!--   Weekly-News start -->
-    <div class="weekly-news-area pt-50">
-        <div class="container">
-           <div class="weekly-wrapper">
-                <!-- section Tittle -->
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="section-tittle mb-30">
-                            <h3>Weekly Top News</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <div class="weekly-news-active dot-style d-flex dot-style">
-                            <div class="weekly-single">
-                                <div class="weekly-img">
-                                    <img src="assets/img/news/weeklyNews2.jpg" alt="">
-                                </div>
-                                <div class="weekly-caption">
-                                    <span class="color1">Strike</span>
-                                    <h4><a href="#">Welcome To The Best Model  Winner Contest</a></h4>
-                                </div>
-                            </div> 
-                            <div class="weekly-single active">
-                                <div class="weekly-img">
-                                        <img src="assets/img/news/weeklyNews1.jpg" alt="">
-                                </div>
-                                <div class="weekly-caption">
-                                    <span class="color1">Strike</span>
-                                    <h4><a href="#">Welcome To The Best Model  Winner Contest</a></h4>
-                                </div>
-                            </div>
-                            <div class="weekly-single">
-                                <div class="weekly-img">
-                                        <img src="assets/img/news/weeklyNews3.jpg" alt="">
-                                </div>
-                                <div class="weekly-caption">
-                                    <span class="color1">Strike</span>
-                                    <h4><a href="#">Welcome To The Best Model  Winner Contest</a></h4>
-                                </div>
-                            </div>
-                            <div class="weekly-single">
-                                <div class="weekly-img">
-                                    <img src="assets/img/news/weeklyNews1.jpg" alt="">
-                                </div>
-                                <div class="weekly-caption">
-                                    <span class="color1">Strike</span>
-                                    <h4><a href="#">Welcome To The Best Model  Winner Contest</a></h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-           </div>
-        </div>
-    </div>           
-    <!-- End Weekly-News -->
-   <!-- Whats New Start -->
-    <section class="whats-news-area pt-50 pb-20">
-        <div class="container">
-            <div class="row">
-            <div class="col-lg-8">
-                <div class="row d-flex justify-content-between">
-                    <div class="col-lg-3 col-md-3">
-                        <div class="section-tittle mb-30">
-                            <h3>Whats New</h3>
-                        </div>
-                    </div>
-                    <div class="col-lg-9 col-md-9">
-                        <div class="properties__button">
-                            <!--Nav Button  -->                                            
-                            <nav>                                                                     
-                                <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                    <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">All</a>
-                                    <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Lifestyle</a>
-                                    <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Travel</a>
-                                    <a class="nav-item nav-link" id="nav-last-tab" data-toggle="tab" href="#nav-last" role="tab" aria-controls="nav-contact" aria-selected="false">Fashion</a>
-                                    <a class="nav-item nav-link" id="nav-Sports" data-toggle="tab" href="#nav-nav-Sport" role="tab" aria-controls="nav-contact" aria-selected="false">Sports</a>
-                                    <a class="nav-item nav-link" id="nav-technology" data-toggle="tab" href="#nav-techno" role="tab" aria-controls="nav-contact" aria-selected="false">Technology</a>
-                                </div>
-                            </nav>
-                            <!--End Nav Button  -->
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <!-- Nav Card -->
-                        <div class="tab-content" id="nav-tabContent">
-                            <!-- card one -->
-                            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">           
-                                <div class="whats-news-caption">
-                                    <div class="row">
-                                        <div class="col-lg-6 col-md-6">
-                                            <div class="single-what-news mb-100">
-                                                <div class="what-img">
-                                                    <img src="assets/img/news/whatNews1.jpg" alt="">
-                                                </div>
-                                                <div class="what-cap">
-                                                    <span class="color1">Night party</span>
-                                                    <h4><a href="#">Welcome To The Best Model  Winner Contest</a></h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6">
-                                            <div class="single-what-news mb-100">
-                                                <div class="what-img">
-                                                    <img src="assets/img/news/whatNews2.jpg" alt="">
-                                                </div>
-                                                <div class="what-cap">
-                                                    <span class="color1">Night party</span>
-                                                    <h4><a href="#">Welcome To The Best Model  Winner Contest</a></h4>
-                                                </div>
-                                            </div>
-                                        </div> 
-                                        <div class="col-lg-6 col-md-6">
-                                            <div class="single-what-news mb-100">
-                                                <div class="what-img">
-                                                    <img src="assets/img/news/whatNews3.jpg" alt="">
-                                                </div>
-                                                <div class="what-cap">
-                                                    <span class="color1">Night party</span>
-                                                    <h4><a href="#">Welcome To The Best Model  Winner Contest</a></h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6">
-                                            <div class="single-what-news mb-100">
-                                                <div class="what-img">
-                                                    <img src="assets/img/news/whatNews4.jpg" alt="">
-                                                </div>
-                                                <div class="what-cap">
-                                                    <span class="color1">Night party</span>
-                                                    <h4><a href="#">Welcome To The Best Model  Winner Contest</a></h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Card two -->
-                            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                                <div class="whats-news-caption">
-                                    <div class="row">
-                                        <div class="col-lg-6 col-md-6">
-                                            <div class="single-what-news mb-100">
-                                                <div class="what-img">
-                                                    <img src="assets/img/news/whatNews1.jpg" alt="">
-                                                </div>
-                                                <div class="what-cap">
-                                                    <span class="color1">Night party</span>
-                                                    <h4><a href="#">Welcome To The Best Model  Winner Contest</a></h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6">
-                                            <div class="single-what-news mb-100">
-                                                <div class="what-img">
-                                                    <img src="assets/img/news/whatNews2.jpg" alt="">
-                                                </div>
-                                                <div class="what-cap">
-                                                    <span class="color1">Night party</span>
-                                                    <h4><a href="#">Welcome To The Best Model  Winner Contest</a></h4>
-                                                </div>
-                                            </div>
-                                        </div> 
-                                        <div class="col-lg-6 col-md-6">
-                                            <div class="single-what-news mb-100">
-                                                <div class="what-img">
-                                                    <img src="assets/img/news/whatNews3.jpg" alt="">
-                                                </div>
-                                                <div class="what-cap">
-                                                    <span class="color1">Night party</span>
-                                                    <h4><a href="#">Welcome To The Best Model  Winner Contest</a></h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6">
-                                            <div class="single-what-news mb-100">
-                                                <div class="what-img">
-                                                    <img src="assets/img/news/whatNews4.jpg" alt="">
-                                                </div>
-                                                <div class="what-cap">
-                                                    <span class="color1">Night party</span>
-                                                    <h4><a href="#">Welcome To The Best Model  Winner Contest</a></h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Card three -->
-                            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-                                <div class="whats-news-caption">
-                                    <div class="row">
-                                        <div class="col-lg-6 col-md-6">
-                                            <div class="single-what-news mb-100">
-                                                <div class="what-img">
-                                                    <img src="assets/img/news/whatNews1.jpg" alt="">
-                                                </div>
-                                                <div class="what-cap">
-                                                    <span class="color1">Night party</span>
-                                                    <h4><a href="#">Welcome To The Best Model  Winner Contest</a></h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6">
-                                            <div class="single-what-news mb-100">
-                                                <div class="what-img">
-                                                    <img src="assets/img/news/whatNews2.jpg" alt="">
-                                                </div>
-                                                <div class="what-cap">
-                                                    <span class="color1">Night party</span>
-                                                    <h4><a href="#">Welcome To The Best Model  Winner Contest</a></h4>
-                                                </div>
-                                            </div>
-                                        </div> 
-                                        <div class="col-lg-6 col-md-6">
-                                            <div class="single-what-news mb-100">
-                                                <div class="what-img">
-                                                    <img src="assets/img/news/whatNews3.jpg" alt="">
-                                                </div>
-                                                <div class="what-cap">
-                                                    <span class="color1">Night party</span>
-                                                    <h4><a href="#">Welcome To The Best Model  Winner Contest</a></h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6">
-                                            <div class="single-what-news mb-100">
-                                                <div class="what-img">
-                                                    <img src="assets/img/news/whatNews4.jpg" alt="">
-                                                </div>
-                                                <div class="what-cap">
-                                                    <span class="color1">Night party</span>
-                                                    <h4><a href="#">Welcome To The Best Model  Winner Contest</a></h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- card fure -->
-                            <div class="tab-pane fade" id="nav-last" role="tabpanel" aria-labelledby="nav-last-tab">
-                                <div class="whats-news-caption">
-                                    <div class="row">
-                                        <div class="col-lg-6 col-md-6">
-                                            <div class="single-what-news mb-100">
-                                                <div class="what-img">
-                                                    <img src="assets/img/news/whatNews1.jpg" alt="">
-                                                </div>
-                                                <div class="what-cap">
-                                                    <span class="color1">Night party</span>
-                                                    <h4><a href="#">Welcome To The Best Model  Winner Contest</a></h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6">
-                                            <div class="single-what-news mb-100">
-                                                <div class="what-img">
-                                                    <img src="assets/img/news/whatNews2.jpg" alt="">
-                                                </div>
-                                                <div class="what-cap">
-                                                    <span class="color1">Night party</span>
-                                                    <h4><a href="#">Welcome To The Best Model  Winner Contest</a></h4>
-                                                </div>
-                                            </div>
-                                        </div> 
-                                        <div class="col-lg-6 col-md-6">
-                                            <div class="single-what-news mb-100">
-                                                <div class="what-img">
-                                                    <img src="assets/img/news/whatNews3.jpg" alt="">
-                                                </div>
-                                                <div class="what-cap">
-                                                    <span class="color1">Night party</span>
-                                                    <h4><a href="#">Welcome To The Best Model  Winner Contest</a></h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6">
-                                            <div class="single-what-news mb-100">
-                                                <div class="what-img">
-                                                    <img src="assets/img/news/whatNews4.jpg" alt="">
-                                                </div>
-                                                <div class="what-cap">
-                                                    <span class="color1">Night party</span>
-                                                    <h4><a href="#">Welcome To The Best Model  Winner Contest</a></h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- card Five -->
-                            <div class="tab-pane fade" id="nav-nav-Sport" role="tabpanel" aria-labelledby="nav-Sports">
-                                <div class="whats-news-caption">
-                                    <div class="row">
-                                        <div class="col-lg-6 col-md-6">
-                                            <div class="single-what-news mb-100">
-                                                <div class="what-img">
-                                                    <img src="assets/img/news/whatNews1.jpg" alt="">
-                                                </div>
-                                                <div class="what-cap">
-                                                    <span class="color1">Night party</span>
-                                                    <h4><a href="#">Welcome To The Best Model  Winner Contest</a></h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6">
-                                            <div class="single-what-news mb-100">
-                                                <div class="what-img">
-                                                    <img src="assets/img/news/whatNews2.jpg" alt="">
-                                                </div>
-                                                <div class="what-cap">
-                                                    <span class="color1">Night party</span>
-                                                    <h4><a href="#">Welcome To The Best Model  Winner Contest</a></h4>
-                                                </div>
-                                            </div>
-                                        </div> 
-                                        <div class="col-lg-6 col-md-6">
-                                            <div class="single-what-news mb-100">
-                                                <div class="what-img">
-                                                    <img src="assets/img/news/whatNews3.jpg" alt="">
-                                                </div>
-                                                <div class="what-cap">
-                                                    <span class="color1">Night party</span>
-                                                    <h4><a href="#">Welcome To The Best Model  Winner Contest</a></h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6">
-                                            <div class="single-what-news mb-100">
-                                                <div class="what-img">
-                                                    <img src="assets/img/news/whatNews4.jpg" alt="">
-                                                </div>
-                                                <div class="what-cap">
-                                                    <span class="color1">Night party</span>
-                                                    <h4><a href="#">Welcome To The Best Model  Winner Contest</a></h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- card Six -->
-                            <div class="tab-pane fade" id="nav-techno" role="tabpanel" aria-labelledby="nav-technology">
-                                <div class="whats-news-caption">
-                                    <div class="row">
-                                        <div class="col-lg-6 col-md-6">
-                                            <div class="single-what-news mb-100">
-                                                <div class="what-img">
-                                                    <img src="assets/img/news/whatNews1.jpg" alt="">
-                                                </div>
-                                                <div class="what-cap">
-                                                    <span class="color1">Night party</span>
-                                                    <h4><a href="#">Welcome To The Best Model  Winner Contest</a></h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6">
-                                            <div class="single-what-news mb-100">
-                                                <div class="what-img">
-                                                    <img src="assets/img/news/whatNews2.jpg" alt="">
-                                                </div>
-                                                <div class="what-cap">
-                                                    <span class="color1">Night party</span>
-                                                    <h4><a href="#">Welcome To The Best Model  Winner Contest</a></h4>
-                                                </div>
-                                            </div>
-                                        </div> 
-                                        <div class="col-lg-6 col-md-6">
-                                            <div class="single-what-news mb-100">
-                                                <div class="what-img">
-                                                    <img src="assets/img/news/whatNews3.jpg" alt="">
-                                                </div>
-                                                <div class="what-cap">
-                                                    <span class="color1">Night party</span>
-                                                    <h4><a href="#">Welcome To The Best Model  Winner Contest</a></h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6">
-                                            <div class="single-what-news mb-100">
-                                                <div class="what-img">
-                                                    <img src="assets/img/news/whatNews4.jpg" alt="">
-                                                </div>
-                                                <div class="what-cap">
-                                                    <span class="color1">Night party</span>
-                                                    <h4><a href="#">Welcome To The Best Model  Winner Contest</a></h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    <!-- End Nav Card -->
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <!-- Section Tittle -->
-                <div class="section-tittle mb-40">
-                    <h3>Follow Us</h3>
-                </div>
-                <!-- Flow Socail -->
-                <div class="single-follow mb-45">
-                    <div class="single-box">
-                        <div class="follow-us d-flex align-items-center">
-                            <div class="follow-social">
-                                <a href="#"><img src="assets/img/news/icon-fb.png" alt=""></a>
-                            </div>
-                            <div class="follow-count">  
-                                <span>8,045</span>
-                                <p>Fans</p>
-                            </div>
-                        </div> 
-                        <div class="follow-us d-flex align-items-center">
-                            <div class="follow-social">
-                                <a href="#"><img src="assets/img/news/icon-tw.png" alt=""></a>
-                            </div>
-                            <div class="follow-count">
-                                <span>8,045</span>
-                                <p>Fans</p>
-                            </div>
-                        </div>
-                            <div class="follow-us d-flex align-items-center">
-                            <div class="follow-social">
-                                <a href="#"><img src="assets/img/news/icon-ins.png" alt=""></a>
-                            </div>
-                            <div class="follow-count">
-                                <span>8,045</span>
-                                <p>Fans</p>
-                            </div>
-                        </div>
-                        <div class="follow-us d-flex align-items-center">
-                            <div class="follow-social">
-                                <a href="#"><img src="assets/img/news/icon-yo.png" alt=""></a>
-                            </div>
-                            <div class="follow-count">
-                                <span>8,045</span>
-                                <p>Fans</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- New Poster -->
-                <div class="news-poster d-none d-lg-block">
-                    <img src="assets/img/news/news_card.jpg" alt="">
-                </div>
-            </div>
-            </div>
-        </div>
-    </section>
-    <!-- Whats New End -->
-    <!--   Weekly2-News start -->
-    <div class="weekly2-news-area  weekly2-pading gray-bg">
-        <div class="container">
-            <div class="weekly2-wrapper">
-                <!-- section Tittle -->
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="section-tittle mb-30">
-                            <h3>Weekly Top News</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <div class="weekly2-news-active dot-style d-flex dot-style">
-                            <div class="weekly2-single">
-                                <div class="weekly2-img">
-                                    <img src="assets/img/news/weekly2News1.jpg" alt="">
-                                </div>
-                                <div class="weekly2-caption">
-                                    <span class="color1">Corporate</span>
-                                    <p>25 Jan 2020</p>
-                                    <h4><a href="#">Welcome To The Best Model  Winner Contest</a></h4>
-                                </div>
-                            </div> 
-                            <div class="weekly2-single">
-                                <div class="weekly2-img">
-                                    <img src="assets/img/news/weekly2News2.jpg" alt="">
-                                </div>
-                                <div class="weekly2-caption">
-                                    <span class="color1">Event night</span>
-                                    <p>25 Jan 2020</p>
-                                    <h4><a href="#">Welcome To The Best Model  Winner Contest</a></h4>
-                                </div>
-                            </div> 
-                            <div class="weekly2-single">
-                                <div class="weekly2-img">
-                                    <img src="assets/img/news/weekly2News3.jpg" alt="">
-                                </div>
-                                <div class="weekly2-caption">
-                                    <span class="color1">Corporate</span>
-                                    <p>25 Jan 2020</p>
-                                    <h4><a href="#">Welcome To The Best Model  Winner Contest</a></h4>
-                                </div>
-                            </div>
-                             <div class="weekly2-single">
-                                <div class="weekly2-img">
-                                    <img src="assets/img/news/weekly2News4.jpg" alt="">
-                                </div>
-                                <div class="weekly2-caption">
-                                    <span class="color1">Event time</span>
-                                    <p>25 Jan 2020</p>
-                                    <h4><a href="#">Welcome To The Best Model  Winner Contest</a></h4>
-                                </div>
-                            </div> 
-                             <div class="weekly2-single">
-                                <div class="weekly2-img">
-                                    <img src="assets/img/news/weekly2News4.jpg" alt="">
-                                </div>
-                                <div class="weekly2-caption">
-                                    <span class="color1">Corporate</span>
-                                    <p>25 Jan 2020</p>
-                                    <h4><a href="#">Welcome To The Best Model  Winner Contest</a></h4>
-                                </div>
-                            </div> 
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>           
-    <!-- End Weekly-News -->
-    <!-- Start Youtube -->
-    <div class="youtube-area video-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="video-items-active">
-                        <div class="video-items text-center">
-                            <iframe src="https://www.youtube.com/embed/CicQIuG8hBo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                        <div class="video-items text-center">
-                            <iframe  src="https://www.youtube.com/embed/rIz00N40bag" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                        <div class="video-items text-center">
-                            <iframe src="https://www.youtube.com/embed/CONfhrASy44" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-                        </div>
-                        <div class="video-items text-center">
-                            <iframe src="https://www.youtube.com/embed/lq6fL2ROWf8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                         
-                        </div>
-                        <div class="video-items text-center">
-                            <iframe src="https://www.youtube.com/embed/0VxlQlacWV4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="video-info">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="video-caption">
-                            <div class="top-caption">
-                                <span class="color1">Politics</span>
-                            </div>
-                            <div class="bottom-caption">
-                                <h2>Welcome To The Best Model Winner Contest At Look of the year</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod ipsum dolor sit. Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod ipsum dolor sit. Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod ipsum dolor sit lorem ipsum dolor sit.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="testmonial-nav text-center">
-                            <div class="single-video">
-                                <iframe  src="https://www.youtube.com/embed/CicQIuG8hBo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                <div class="video-intro">
-                                    <h4>Welcotme To The Best Model Winner Contest</h4>
-                                </div>
-                            </div>
-                            <div class="single-video">
-                                <iframe  src="https://www.youtube.com/embed/rIz00N40bag" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                <div class="video-intro">
-                                    <h4>Welcotme To The Best Model Winner Contest</h4>
-                                </div>
-                            </div>
-                            <div class="single-video">
-                                <iframe src="https://www.youtube.com/embed/CONfhrASy44" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                <div class="video-intro">
-                                    <h4>Welcotme To The Best Model Winner Contest</h4>
-                                </div>
-                            </div>
-                            <div class="single-video">
-                                <iframe src="https://www.youtube.com/embed/lq6fL2ROWf8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                <div class="video-intro">
-                                    <h4>Welcotme To The Best Model Winner Contest</h4>
-                                </div>
-                            </div>
-                            <div class="single-video">
-                                <iframe src="https://www.youtube.com/embed/0VxlQlacWV4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                <div class="video-intro">
-                                    <h4>Welcotme To The Best Model Winner Contest</h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> 
-    <!-- End Start youtube -->
-    <!--  Recent Articles start -->
-    <div class="recent-articles">
-        <div class="container">
-           <div class="recent-wrapper">
-                <!-- section Tittle -->
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="section-tittle mb-30">
-                            <h3>Recent Articles</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <div class="recent-active dot-style d-flex dot-style">
-                            <div class="single-recent mb-100">
-                                <div class="what-img">
-                                    <img src="assets/img/news/recent1.jpg" alt="">
-                                </div>
-                                <div class="what-cap">
-                                    <span class="color1">Night party</span>
-                                    <h4><a href="#">Welcome To The Best Model  Winner Contest</a></h4>
-                                </div>
-                            </div>
-                            <div class="single-recent mb-100">
-                                <div class="what-img">
-                                    <img src="assets/img/news/recent2.jpg" alt="">
-                                </div>
-                                <div class="what-cap">
-                                    <span class="color1">Night party</span>
-                                    <h4><a href="#">Welcome To The Best Model  Winner Contest</a></h4>
-                                </div>
-                            </div>
-                            <div class="single-recent mb-100">
-                                <div class="what-img">
-                                    <img src="assets/img/news/recent3.jpg" alt="">
-                                </div>
-                                <div class="what-cap">
-                                    <span class="color1">Night party</span>
-                                    <h4><a href="#">Welcome To The Best Model  Winner Contest</a></h4>
-                                </div>
-                            </div>
-                            <div class="single-recent mb-100">
-                                <div class="what-img">
-                                    <img src="assets/img/news/recent2.jpg" alt="">
-                                </div>
-                                <div class="what-cap">
-                                    <span class="color1">Night party</span>
-                                    <h4><a href="#">Welcome To The Best Model  Winner Contest</a></h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-           </div>
-        </div>
-    </div>           
-    <!--Recent Articles End -->
-    <!--Start pagination -->
-    <div class="pagination-area pb-45 text-center">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="single-wrap d-flex justify-content-center">
-                        <nav aria-label="Page navigation example">
-                            <ul class="pagination justify-content-start">
-                              <li class="page-item"><a class="page-link" href="#"><span class="flaticon-arrow roted"></span></a></li>
-                                <li class="page-item active"><a class="page-link" href="#">01</a></li>
-                                <li class="page-item"><a class="page-link" href="#">02</a></li>
-                                <li class="page-item"><a class="page-link" href="#">03</a></li>
-                              <li class="page-item"><a class="page-link" href="#"><span class="flaticon-arrow right-arrow"></span></a></li>
-                            </ul>
-                          </nav>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End pagination  -->
-    </main>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @include('layout.header')
+</head>
+<body class="animsition">
     
-   <footer>
-       <!-- Footer Start-->
-       <div class="footer-area footer-padding fix">
-            <div class="container">
-                <div class="row d-flex justify-content-between">
-                    <div class="col-xl-5 col-lg-5 col-md-7 col-sm-12">
-                        <div class="single-footer-caption">
-                            <div class="single-footer-caption">
-                                <!-- logo -->
-                                <div class="footer-logo">
-                                    <a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
-                                </div>
-                                <div class="footer-tittle">
-                                    <div class="footer-pera">
-                                        <p>Suscipit mauris pede for con sectetuer sodales adipisci for cursus fames lectus tempor da blandit gravida sodales  Suscipit mauris pede for con sectetuer sodales adipisci for cursus fames lectus tempor da blandit gravida sodales  Suscipit mauris pede for sectetuer.</p>
-                                    </div>
-                                </div>
-                                <!-- social -->
-                                <div class="footer-social">
-                                    <a href="#"><i class="fab fa-twitter"></i></a>
-                                    <a href="#"><i class="fab fa-instagram"></i></a>
-                                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                                </div>
-                            </div>
-                        </div>
+    <!-- Header -->
+    <header>
+        <!-- Header desktop -->
+        <div class="container-menu-desktop">            
+            <div class="topbar">
+                <div class="content-topbar container h-100">
+                    <div class="left-topbar">
+                        <span class="left-topbar-item flex-wr-s-c">
+                            <span>
+                                New York, NY
+                            </span>
+
+                            <img class="m-b-1 m-rl-8" src="{{asset('front-assets/images/icons/icon-night.png')}}" alt="IMG">
+
+                            <span>
+                                HI 58° LO 56°
+                            </span>
+                        </span>
+
+                        <a href="#" class="left-topbar-item">
+                            About
+                        </a>
+
+                        <a href="#" class="left-topbar-item">
+                            Contact
+                        </a>
+
+                        <a href="#" class="left-topbar-item">
+                            Sing up
+                        </a>
+
+                        <a href="#" class="left-topbar-item">
+                            Log in
+                        </a>
                     </div>
-                    <div class="col-xl-3 col-lg-3 col-md-4  col-sm-6">
-                        <div class="single-footer-caption mt-60">
-                            <div class="footer-tittle">
-                                <h4>Newsletter</h4>
-                                <p>Heaven fruitful doesn't over les idays appear creeping</p>
-                                <!-- Form -->
-                                <div class="footer-form" >
-                                    <div id="mc_embed_signup">
-                                        <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
-                                        method="get" class="subscribe_form relative mail_part">
-                                            <input type="email" name="email" id="newsletter-form-email" placeholder="Email Address"
-                                            class="placeholder hide-on-focus" onfocus="this.placeholder = ''"
-                                            onblur="this.placeholder = ' Email Address '">
-                                            <div class="form-icon">
-                                            <button type="submit" name="submit" id="newsletter-submit"
-                                            class="email_icon newsletter-submit button-contactForm"><img src="assets/img/logo/form-iocn.png" alt=""></button>
-                                            </div>
-                                            <div class="mt-10 info"></div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+
+                    <div class="right-topbar">
+                        <a href="#">
+                            <span class="fab fa-facebook-f"></span>
+                        </a>
+
+                        <a href="#">
+                            <span class="fab fa-twitter"></span>
+                        </a>
+
+                        <a href="#">
+                            <span class="fab fa-pinterest-p"></span>
+                        </a>
+
+                        <a href="#">
+                            <span class="fab fa-vimeo-v"></span>
+                        </a>
+
+                        <a href="#">
+                            <span class="fab fa-youtube"></span>
+                        </a>
                     </div>
-                    <div class="col-xl-3 col-lg-3 col-md-5 col-sm-6">
-                        <div class="single-footer-caption mb-50 mt-60">
-                            <div class="footer-tittle">
-                                <h4>Instagram Feed</h4>
-                            </div>
-                            <div class="instagram-gellay">
-                                <ul class="insta-feed">
-                                    <li><a href="#"><img src="assets/img/post/instra1.jpg" alt=""></a></li>
-                                    <li><a href="#"><img src="assets/img/post/instra2.jpg" alt=""></a></li>
-                                    <li><a href="#"><img src="assets/img/post/instra3.jpg" alt=""></a></li>
-                                    <li><a href="#"><img src="assets/img/post/instra4.jpg" alt=""></a></li>
-                                    <li><a href="#"><img src="assets/img/post/instra5.jpg" alt=""></a></li>
-                                    <li><a href="#"><img src="assets/img/post/instra6.jpg" alt=""></a></li>
+                </div>
+            </div>
+
+            <!-- Header Mobile -->
+            <div class="wrap-header-mobile">
+                <!-- Logo moblie -->        
+                <div class="logo-mobile">
+                    <a href="index.html"><img src="{{asset('front-assets/images/icons/logo-01.png')}}" alt="IMG-LOGO"></a>
+                </div>
+
+                <!-- Button show menu -->
+                <div class="btn-show-menu-mobile hamburger hamburger--squeeze m-r--8">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Menu Mobile -->
+            <div class="menu-mobile">
+                <ul class="topbar-mobile">
+                    <li class="left-topbar">
+                        <span class="left-topbar-item flex-wr-s-c">
+                            <span>
+                                New York, NY
+                            </span>
+
+                            <img class="m-b-1 m-rl-8" src="{{asset('front-assets/images/icons/icon-night.png')}}" alt="IMG">
+
+                            <span>
+                                HI 58° LO 56°
+                            </span>
+                        </span>
+                    </li>
+
+                    <li class="left-topbar">
+                        <a href="#" class="left-topbar-item">
+                            About
+                        </a>
+
+                        <a href="#" class="left-topbar-item">
+                            Contact
+                        </a>
+
+                        <a href="#" class="left-topbar-item">
+                            Sing up
+                        </a>
+
+                        <a href="#" class="left-topbar-item">
+                            Log in
+                        </a>
+                    </li>
+
+                    <li class="right-topbar">
+                        <a href="#">
+                            <span class="fab fa-facebook-f"></span>
+                        </a>
+
+                        <a href="#">
+                            <span class="fab fa-twitter"></span>
+                        </a>
+
+                        <a href="#">
+                            <span class="fab fa-pinterest-p"></span>
+                        </a>
+
+                        <a href="#">
+                            <span class="fab fa-vimeo-v"></span>
+                        </a>
+
+                        <a href="#">
+                            <span class="fab fa-youtube"></span>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="main-menu-m">
+                    <li>
+                        <a href="index.html">Home</a>
+                        <ul class="sub-menu-m">
+                            <li><a href="index.html">Homepage v1</a></li>
+                            <li><a href="home-02.html">Homepage v2</a></li>
+                            <li><a href="home-03.html">Homepage v3</a></li>
+                        </ul>
+
+                        <span class="arrow-main-menu-m">
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        </span>
+                    </li>
+
+                    <li>
+                        <a href="category-01.html">News</a>
+                    </li>
+
+                    <li>
+                        <a href="category-02.html">Entertainment </a>
+                    </li>
+
+                    <li>
+                        <a href="category-01.html">Business</a>
+                    </li>
+
+                    <li>
+                        <a href="category-02.html">Travel</a>
+                    </li>
+
+                    <li>
+                        <a href="category-01.html">Life Style</a>
+                    </li>
+
+                    <li>
+                        <a href="category-02.html">Video</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Features</a>
+                        <ul class="sub-menu-m">
+                            <li><a href="category-01.html">Category Page v1</a></li>
+                            <li><a href="category-02.html">Category Page v2</a></li>
+                            <li><a href="blog-grid.html">Blog Grid Sidebar</a></li>
+                            <li><a href="blog-list-01.html">Blog List Sidebar v1</a></li>
+                            <li><a href="blog-list-02.html">Blog List Sidebar v2</a></li>
+                            <li><a href="blog-detail-01.html">Blog Detail Sidebar</a></li>
+                            <li><a href="blog-detail-02.html">Blog Detail No Sidebar</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+
+                        <span class="arrow-main-menu-m">
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- desktop -->
+            <div class="wrap-logo container">
+                <!-- Logo desktop -->       
+                <div class="logo">
+                    <a href="index.html"><img src="{{asset('front-assets/images/icons/logo-01.png')}}" alt="LOGO"></a>
+                </div>  
+
+                <!-- Banner -->
+                <div class="banner-header">
+                    <a href="https://themewagon.com/themes/free-bootstrap-4-html5-news-website-template-magnews2/">
+                        <img src="{{asset('front-assets/images/banner-01.jpg')}}" alt="IMG">
+                    </a>
+                </div>
+            </div>  
+            
+            <!-- desktop -->
+            <div class="wrap-main-nav">
+                <div class="main-nav">
+                    <!-- Menu desktop -->
+                    <nav class="menu-desktop">
+                        <a class="logo-stick" href="index.html">
+                            <img src="{{asset('front-assets/images/icons/logo-01.png')}}" alt="LOGO">
+                        </a>
+
+                        <ul class="main-menu">
+                            <li class="main-menu-active">
+                                <a href="index.html">Home</a>
+                                <ul class="sub-menu">
+                                    <li><a href="index.html">Homepage v1</a></li>
+                                    <li><a href="home-02.html">Homepage v2</a></li>
+                                    <li><a href="home-03.html">Homepage v3</a></li>
                                 </ul>
+                            </li>
+
+                            <li class="mega-menu-item">
+                                <a href="category-01.html">News</a>
+
+                                <div class="sub-mega-menu">
+                                    <div class="nav flex-column nav-pills" role="tablist">
+                                        <a class="nav-link active" data-toggle="pill" href="#news-0" role="tab">All</a>
+                                        <a class="nav-link" data-toggle="pill" href="#news-1" role="tab">Entertaiment</a>
+                                        <a class="nav-link" data-toggle="pill" href="#news-2" role="tab">Fashion</a>
+                                        <a class="nav-link" data-toggle="pill" href="#news-3" role="tab">Life Style</a>
+                                        <a class="nav-link" data-toggle="pill" href="#news-4" role="tab">Technology</a>
+                                        <a class="nav-link" data-toggle="pill" href="#news-5" role="tab">Travel</a>
+                                    </div>
+
+                                    <div class="tab-content">
+                                        <div class="tab-pane show active" id="news-0" role="tabpanel">
+                                            <div class="row">
+                                                <div class="col-3">
+                                                    <!-- Item post -->  
+                                                    <div>
+                                                        <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                            <img src="{{asset('front-assets/images/post-05.jpg')}}" alt="IMG">
+                                                        </a>
+
+                                                        <div class="p-t-10">
+                                                            <h5 class="p-b-5">
+                                                                <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                    Donec metus orci, malesuada et lectus vitae
+                                                                </a>
+                                                            </h5>
+
+                                                            <span class="cl8">
+                                                                <a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+                                                                    Music
+                                                                </a>
+
+                                                                <span class="f1-s-3 m-rl-3">
+                                                                    -
+                                                                </span>
+
+                                                                <span class="f1-s-3">
+                                                                    Feb 18
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-3">
+                                                    <!-- Item post -->  
+                                                    <div>
+                                                        <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                            <img src="{{asset('front-assets/images/post-10.jpg')}}" alt="IMG">
+                                                        </a>
+
+                                                        <div class="p-t-10">
+                                                            <h5 class="p-b-5">
+                                                                <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                    Donec metus orci, malesuada et lectus vitae
+                                                                </a>
+                                                            </h5>
+
+                                                            <span class="cl8">
+                                                                <a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+                                                                    Finance
+                                                                </a>
+
+                                                                <span class="f1-s-3 m-rl-3">
+                                                                    -
+                                                                </span>
+
+                                                                <span class="f1-s-3">
+                                                                    Jan 15
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-3">
+                                                    <!-- Item post -->  
+                                                    <div>
+                                                        <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                            <img src="{{asset('front-assets/images/post-14.jpg')}}" alt="IMG">
+                                                        </a>
+
+                                                        <div class="p-t-10">
+                                                            <h5 class="p-b-5">
+                                                                <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                    Donec metus orci, malesuada et lectus vitae
+                                                                </a>
+                                                            </h5>
+
+                                                            <span class="cl8">
+                                                                <a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+                                                                    Beach
+                                                                </a>
+
+                                                                <span class="f1-s-3 m-rl-3">
+                                                                    -
+                                                                </span>
+
+                                                                <span class="f1-s-3">
+                                                                    Feb 12
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-3">
+                                                    <!-- Item post -->  
+                                                    <div>
+                                                        <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                            <img src="{{asset('front-assets/images/post-36.jpg')}}" alt="IMG">
+                                                        </a>
+
+                                                        <div class="p-t-10">
+                                                            <h5 class="p-b-5">
+                                                                <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                    Donec metus orci, malesuada et lectus vitae
+                                                                </a>
+                                                            </h5>
+
+                                                            <span class="cl8">
+                                                                <a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+                                                                    Technology
+                                                                </a>
+
+                                                                <span class="f1-s-3 m-rl-3">
+                                                                    -
+                                                                </span>
+
+                                                                <span class="f1-s-3">
+                                                                    Jan 20
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="tab-pane" id="news-1" role="tabpanel">
+                                            <div class="row">
+                                                <div class="col-3">
+                                                    <!-- Item post -->  
+                                                    <div>
+                                                        <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                            <img src="{{asset('front-assets/images/post-50.jpg')}}" alt="IMG">
+                                                        </a>
+
+                                                        <div class="p-t-10">
+                                                            <h5 class="p-b-5">
+                                                                <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                    Donec metus orci, malesuada et lectus vitae
+                                                                </a>
+                                                            </h5>
+
+                                                            <span class="cl8">
+                                                                <a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+                                                                    Music
+                                                                </a>
+
+                                                                <span class="f1-s-3 m-rl-3">
+                                                                    -
+                                                                </span>
+
+                                                                <span class="f1-s-3">
+                                                                    Feb 18
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-3">
+                                                    <!-- Item post -->  
+                                                    <div>
+                                                        <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                            <img src="{{asset('front-assets/images/post-08.jpg')}}" alt="IMG">
+                                                        </a>
+
+                                                        <div class="p-t-10">
+                                                            <h5 class="p-b-5">
+                                                                <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                    Donec metus orci, malesuada et lectus vitae
+                                                                </a>
+                                                            </h5>
+
+                                                            <span class="cl8">
+                                                                <a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+                                                                    Music
+                                                                </a>
+
+                                                                <span class="f1-s-3 m-rl-3">
+                                                                    -
+                                                                </span>
+
+                                                                <span class="f1-s-3">
+                                                                    Feb 12
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-3">
+                                                    <!-- Item post -->  
+                                                    <div>
+                                                        <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                            <img src="{{asset('front-assets/images/post-07.jpg')}}" alt="IMG">
+                                                        </a>
+
+                                                        <div class="p-t-10">
+                                                            <h5 class="p-b-5">
+                                                                <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                    Donec metus orci, malesuada et lectus vitae
+                                                                </a>
+                                                            </h5>
+
+                                                            <span class="cl8">
+                                                                <a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+                                                                    Music
+                                                                </a>
+
+                                                                <span class="f1-s-3 m-rl-3">
+                                                                    -
+                                                                </span>
+
+                                                                <span class="f1-s-3">
+                                                                    Jan 20
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-3">
+                                                    <!-- Item post -->  
+                                                    <div>
+                                                        <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                            <img src="{{asset('front-assets/images/post-06.jpg')}}" alt="IMG">
+                                                        </a>
+
+                                                        <div class="p-t-10">
+                                                            <h5 class="p-b-5">
+                                                                <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                    Donec metus orci, malesuada et lectus vitae
+                                                                </a>
+                                                            </h5>
+
+                                                            <span class="cl8">
+                                                                <a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+                                                                    Music
+                                                                </a>
+
+                                                                <span class="f1-s-3 m-rl-3">
+                                                                    -
+                                                                </span>
+
+                                                                <span class="f1-s-3">
+                                                                    Jan 15
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="tab-pane" id="news-2" role="tabpanel">
+                                            <div class="row">
+                                                <div class="col-3">
+                                                    <!-- Item post -->  
+                                                    <div>
+                                                        <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                            <img src="{{asset('front-assets/images/post-21.jpg')}}" alt="IMG">
+                                                        </a>
+
+                                                        <div class="p-t-10">
+                                                            <h5 class="p-b-5">
+                                                                <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                    Donec metus orci, malesuada et lectus vitae
+                                                                </a>
+                                                            </h5>
+
+                                                            <span class="cl8">
+                                                                <a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+                                                                    Music
+                                                                </a>
+
+                                                                <span class="f1-s-3 m-rl-3">
+                                                                    -
+                                                                </span>
+
+                                                                <span class="f1-s-3">
+                                                                    Feb 18
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-3">
+                                                    <!-- Item post -->  
+                                                    <div>
+                                                        <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                            <img src="{{asset('front-assets/images/post-24.jpg')}}" alt="IMG">
+                                                        </a>
+
+                                                        <div class="p-t-10">
+                                                            <h5 class="p-b-5">
+                                                                <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                    Donec metus orci, malesuada et lectus vitae
+                                                                </a>
+                                                            </h5>
+
+                                                            <span class="cl8">
+                                                                <a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+                                                                    Music
+                                                                </a>
+
+                                                                <span class="f1-s-3 m-rl-3">
+                                                                    -
+                                                                </span>
+
+                                                                <span class="f1-s-3">
+                                                                    Jan 15
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-3">
+                                                    <!-- Item post -->  
+                                                    <div>
+                                                        <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                            <img src="{{asset('front-assets/images/post-22.jpg')}}" alt="IMG">
+                                                        </a>
+
+                                                        <div class="p-t-10">
+                                                            <h5 class="p-b-5">
+                                                                <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                    Donec metus orci, malesuada et lectus vitae
+                                                                </a>
+                                                            </h5>
+
+                                                            <span class="cl8">
+                                                                <a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+                                                                    Music
+                                                                </a>
+
+                                                                <span class="f1-s-3 m-rl-3">
+                                                                    -
+                                                                </span>
+
+                                                                <span class="f1-s-3">
+                                                                    Feb 12
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-3">
+                                                    <!-- Item post -->  
+                                                    <div>
+                                                        <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                            <img src="{{asset('front-assets/images/post-23.jpg')}}" alt="IMG">
+                                                        </a>
+
+                                                        <div class="p-t-10">
+                                                            <h5 class="p-b-5">
+                                                                <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                    Donec metus orci, malesuada et lectus vitae
+                                                                </a>
+                                                            </h5>
+
+                                                            <span class="cl8">
+                                                                <a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+                                                                    Music
+                                                                </a>
+
+                                                                <span class="f1-s-3 m-rl-3">
+                                                                    -
+                                                                </span>
+
+                                                                <span class="f1-s-3">
+                                                                    Jan 20
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="tab-pane" id="news-3" role="tabpanel">
+                                            <div class="row">
+                                                <div class="col-3">
+                                                    <!-- Item post -->  
+                                                    <div>
+                                                        <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                            <img src="{{asset('front-assets/images/post-25.jpg')}}" alt="IMG">
+                                                        </a>
+
+                                                        <div class="p-t-10">
+                                                            <h5 class="p-b-5">
+                                                                <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                    Donec metus orci, malesuada et lectus vitae
+                                                                </a>
+                                                            </h5>
+
+                                                            <span class="cl8">
+                                                                <a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+                                                                    Music
+                                                                </a>
+
+                                                                <span class="f1-s-3 m-rl-3">
+                                                                    -
+                                                                </span>
+
+                                                                <span class="f1-s-3">
+                                                                    Feb 18
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-3">
+                                                    <!-- Item post -->  
+                                                    <div>
+                                                        <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                            <img src="{{asset('front-assets/images/post-27.jpg')}}" alt="IMG">
+                                                        </a>
+
+                                                        <div class="p-t-10">
+                                                            <h5 class="p-b-5">
+                                                                <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                    Donec metus orci, malesuada et lectus vitae
+                                                                </a>
+                                                            </h5>
+
+                                                            <span class="cl8">
+                                                                <a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+                                                                    Music
+                                                                </a>
+
+                                                                <span class="f1-s-3 m-rl-3">
+                                                                    -
+                                                                </span>
+
+                                                                <span class="f1-s-3">
+                                                                    Jan 20
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-3">
+                                                    <!-- Item post -->  
+                                                    <div>
+                                                        <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                            <img src="{{asset('front-assets/images/post-26.jpg')}}" alt="IMG">
+                                                        </a>
+
+                                                        <div class="p-t-10">
+                                                            <h5 class="p-b-5">
+                                                                <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                    Donec metus orci, malesuada et lectus vitae
+                                                                </a>
+                                                            </h5>
+
+                                                            <span class="cl8">
+                                                                <a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+                                                                    Music
+                                                                </a>
+
+                                                                <span class="f1-s-3 m-rl-3">
+                                                                    -
+                                                                </span>
+
+                                                                <span class="f1-s-3">
+                                                                    Feb 12
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-3">
+                                                    <!-- Item post -->  
+                                                    <div>
+                                                        <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                            <img src="{{asset('front-assets/images/post-34.jpg')}}" alt="IMG">
+                                                        </a>
+
+                                                        <div class="p-t-10">
+                                                            <h5 class="p-b-5">
+                                                                <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                    Donec metus orci, malesuada et lectus vitae
+                                                                </a>
+                                                            </h5>
+
+                                                            <span class="cl8">
+                                                                <a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+                                                                    Music
+                                                                </a>
+
+                                                                <span class="f1-s-3 m-rl-3">
+                                                                    -
+                                                                </span>
+
+                                                                <span class="f1-s-3">
+                                                                    Jan 15
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="tab-pane" id="news-4" role="tabpanel">
+                                            <div class="row">
+                                                <div class="col-3">
+                                                    <!-- Item post -->  
+                                                    <div>
+                                                        <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                            <img src="{{asset('front-assets/images/post-35.jpg')}}" alt="IMG">
+                                                        </a>
+
+                                                        <div class="p-t-10">
+                                                            <h5 class="p-b-5">
+                                                                <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                    Donec metus orci, malesuada et lectus vitae
+                                                                </a>
+                                                            </h5>
+
+                                                            <span class="cl8">
+                                                                <a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+                                                                    Music
+                                                                </a>
+
+                                                                <span class="f1-s-3 m-rl-3">
+                                                                    -
+                                                                </span>
+
+                                                                <span class="f1-s-3">
+                                                                    Feb 18
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-3">
+                                                    <!-- Item post -->  
+                                                    <div>
+                                                        <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                            <img src="{{asset('front-assets/images/post-36.jpg')}}" alt="IMG">
+                                                        </a>
+
+                                                        <div class="p-t-10">
+                                                            <h5 class="p-b-5">
+                                                                <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                    Donec metus orci, malesuada et lectus vitae
+                                                                </a>
+                                                            </h5>
+
+                                                            <span class="cl8">
+                                                                <a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+                                                                    Music
+                                                                </a>
+
+                                                                <span class="f1-s-3 m-rl-3">
+                                                                    -
+                                                                </span>
+
+                                                                <span class="f1-s-3">
+                                                                    Feb 12
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-3">
+                                                    <!-- Item post -->  
+                                                    <div>
+                                                        <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                            <img src="{{asset('front-assets/images/post-37.jpg')}}" alt="IMG">
+                                                        </a>
+
+                                                        <div class="p-t-10">
+                                                            <h5 class="p-b-5">
+                                                                <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                    Donec metus orci, malesuada et lectus vitae
+                                                                </a>
+                                                            </h5>
+
+                                                            <span class="cl8">
+                                                                <a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+                                                                    Music
+                                                                </a>
+
+                                                                <span class="f1-s-3 m-rl-3">
+                                                                    -
+                                                                </span>
+
+                                                                <span class="f1-s-3">
+                                                                    Jan 20
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-3">
+                                                    <!-- Item post -->  
+                                                    <div>
+                                                        <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                            <img src="{{asset('front-assets/images/post-38.jpg')}}" alt="IMG">
+                                                        </a>
+
+                                                        <div class="p-t-10">
+                                                            <h5 class="p-b-5">
+                                                                <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                    Donec metus orci, malesuada et lectus vitae
+                                                                </a>
+                                                            </h5>
+
+                                                            <span class="cl8">
+                                                                <a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+                                                                    Music
+                                                                </a>
+
+                                                                <span class="f1-s-3 m-rl-3">
+                                                                    -
+                                                                </span>
+
+                                                                <span class="f1-s-3">
+                                                                    Jan 15
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="tab-pane" id="news-5" role="tabpanel">
+                                            <div class="row">
+                                                <div class="col-3">
+                                                    <!-- Item post -->  
+                                                    <div>
+                                                        <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                            <img src="{{asset('front-assets/images/post-39.jpg')}}" alt="IMG">
+                                                        </a>
+
+                                                        <div class="p-t-10">
+                                                            <h5 class="p-b-5">
+                                                                <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                    Donec metus orci, malesuada et lectus vitae
+                                                                </a>
+                                                            </h5>
+
+                                                            <span class="cl8">
+                                                                <a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+                                                                    Music
+                                                                </a>
+
+                                                                <span class="f1-s-3 m-rl-3">
+                                                                    -
+                                                                </span>
+
+                                                                <span class="f1-s-3">
+                                                                    Feb 18
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-3">
+                                                    <!-- Item post -->  
+                                                    <div>
+                                                        <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                            <img src="{{asset('front-assets/images/post-41.jpg')}}" alt="IMG">
+                                                        </a>
+
+                                                        <div class="p-t-10">
+                                                            <h5 class="p-b-5">
+                                                                <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                    Donec metus orci, malesuada et lectus vitae
+                                                                </a>
+                                                            </h5>
+
+                                                            <span class="cl8">
+                                                                <a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+                                                                    Music
+                                                                </a>
+
+                                                                <span class="f1-s-3 m-rl-3">
+                                                                    -
+                                                                </span>
+
+                                                                <span class="f1-s-3">
+                                                                    Jan 20
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-3">
+                                                    <!-- Item post -->  
+                                                    <div>
+                                                        <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                            <img src="{{asset('front-assets/images/post-42.jpg')}}" alt="IMG">
+                                                        </a>
+
+                                                        <div class="p-t-10">
+                                                            <h5 class="p-b-5">
+                                                                <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                    Donec metus orci, malesuada et lectus vitae
+                                                                </a>
+                                                            </h5>
+
+                                                            <span class="cl8">
+                                                                <a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+                                                                    Music
+                                                                </a>
+
+                                                                <span class="f1-s-3 m-rl-3">
+                                                                    -
+                                                                </span>
+
+                                                                <span class="f1-s-3">
+                                                                    Jan 15
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-3">
+                                                    <!-- Item post -->  
+                                                    <div>
+                                                        <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                            <img src="{{asset('front-assets/images/post-40.jpg')}}" alt="IMG">
+                                                        </a>
+
+                                                        <div class="p-t-10">
+                                                            <h5 class="p-b-5">
+                                                                <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                    Donec metus orci, malesuada et lectus vitae
+                                                                </a>
+                                                            </h5>
+
+                                                            <span class="cl8">
+                                                                <a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+                                                                    Music
+                                                                </a>
+
+                                                                <span class="f1-s-3 m-rl-3">
+                                                                    -
+                                                                </span>
+
+                                                                <span class="f1-s-3">
+                                                                    Feb 12
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="mega-menu-item">
+                                <a href="category-02.html">Entertainment </a>
+
+                                <div class="sub-mega-menu">
+                                    <div class="nav flex-column nav-pills" role="tablist">
+                                        <a class="nav-link active" data-toggle="pill" href="#enter-1" role="tab">All</a>
+                                        <a class="nav-link" data-toggle="pill" href="#enter-2" role="tab">Game</a>
+                                        <a class="nav-link" data-toggle="pill" href="#enter-3" role="tab">Celebrity</a>
+                                    </div>
+
+                                    <div class="tab-content">
+                                        <div class="tab-pane show active" id="enter-1" role="tabpanel">
+                                            <div class="row">
+                                                <div class="col-3">
+                                                    <!-- Item post -->  
+                                                    <div>
+                                                        <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                            <img src="{{asset('front-assets/images/post-25.jpg')}}" alt="IMG">
+                                                        </a>
+
+                                                        <div class="p-t-10">
+                                                            <h5 class="p-b-5">
+                                                                <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                    Donec metus orci, malesuada et lectus vitae
+                                                                </a>
+                                                            </h5>
+
+                                                            <span class="cl8">
+                                                                <a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+                                                                    Music
+                                                                </a>
+
+                                                                <span class="f1-s-3 m-rl-3">
+                                                                    -
+                                                                </span>
+
+                                                                <span class="f1-s-3">
+                                                                    Feb 18
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-3">
+                                                    <!-- Item post -->  
+                                                    <div>
+                                                        <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                            <img src="{{asset('front-assets/images/post-27.jpg')}}" alt="IMG">
+                                                        </a>
+
+                                                        <div class="p-t-10">
+                                                            <h5 class="p-b-5">
+                                                                <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                    Donec metus orci, malesuada et lectus vitae
+                                                                </a>
+                                                            </h5>
+
+                                                            <span class="cl8">
+                                                                <a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+                                                                    Music
+                                                                </a>
+
+                                                                <span class="f1-s-3 m-rl-3">
+                                                                    -
+                                                                </span>
+
+                                                                <span class="f1-s-3">
+                                                                    Jan 20
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-3">
+                                                    <!-- Item post -->  
+                                                    <div>
+                                                        <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                            <img src="{{asset('front-assets/images/post-26.jpg')}}" alt="IMG">
+                                                        </a>
+
+                                                        <div class="p-t-10">
+                                                            <h5 class="p-b-5">
+                                                                <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                    Donec metus orci, malesuada et lectus vitae
+                                                                </a>
+                                                            </h5>
+
+                                                            <span class="cl8">
+                                                                <a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+                                                                    Music
+                                                                </a>
+
+                                                                <span class="f1-s-3 m-rl-3">
+                                                                    -
+                                                                </span>
+
+                                                                <span class="f1-s-3">
+                                                                    Feb 12
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-3">
+                                                    <!-- Item post -->  
+                                                    <div>
+                                                        <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                            <img src="{{asset('front-assets/images/post-34.jpg')}}" alt="IMG">
+                                                        </a>
+
+                                                        <div class="p-t-10">
+                                                            <h5 class="p-b-5">
+                                                                <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                    Donec metus orci, malesuada et lectus vitae
+                                                                </a>
+                                                            </h5>
+
+                                                            <span class="cl8">
+                                                                <a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+                                                                    Music
+                                                                </a>
+
+                                                                <span class="f1-s-3 m-rl-3">
+                                                                    -
+                                                                </span>
+
+                                                                <span class="f1-s-3">
+                                                                    Jan 15
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="tab-pane" id="enter-2" role="tabpanel">
+                                            <div class="row">
+                                                <div class="col-3">
+                                                    <!-- Item post -->  
+                                                    <div>
+                                                        <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                            <img src="{{asset('front-assets/images/post-35.jpg')}}" alt="IMG">
+                                                        </a>
+
+                                                        <div class="p-t-10">
+                                                            <h5 class="p-b-5">
+                                                                <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                    Donec metus orci, malesuada et lectus vitae
+                                                                </a>
+                                                            </h5>
+
+                                                            <span class="cl8">
+                                                                <a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+                                                                    Music
+                                                                </a>
+
+                                                                <span class="f1-s-3 m-rl-3">
+                                                                    -
+                                                                </span>
+
+                                                                <span class="f1-s-3">
+                                                                    Feb 18
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-3">
+                                                    <!-- Item post -->  
+                                                    <div>
+                                                        <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                            <img src="{{asset('front-assets/images/post-36.jpg')}}" alt="IMG">
+                                                        </a>
+
+                                                        <div class="p-t-10">
+                                                            <h5 class="p-b-5">
+                                                                <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                    Donec metus orci, malesuada et lectus vitae
+                                                                </a>
+                                                            </h5>
+
+                                                            <span class="cl8">
+                                                                <a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+                                                                    Music
+                                                                </a>
+
+                                                                <span class="f1-s-3 m-rl-3">
+                                                                    -
+                                                                </span>
+
+                                                                <span class="f1-s-3">
+                                                                    Feb 12
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-3">
+                                                    <!-- Item post -->  
+                                                    <div>
+                                                        <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                            <img src="{{asset('front-assets/images/post-37.jpg')}}" alt="IMG">
+                                                        </a>
+
+                                                        <div class="p-t-10">
+                                                            <h5 class="p-b-5">
+                                                                <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                    Donec metus orci, malesuada et lectus vitae
+                                                                </a>
+                                                            </h5>
+
+                                                            <span class="cl8">
+                                                                <a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+                                                                    Music
+                                                                </a>
+
+                                                                <span class="f1-s-3 m-rl-3">
+                                                                    -
+                                                                </span>
+
+                                                                <span class="f1-s-3">
+                                                                    Jan 20
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-3">
+                                                    <!-- Item post -->  
+                                                    <div>
+                                                        <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                            <img src="{{asset('front-assets/images/post-38.jpg')}}" alt="IMG">
+                                                        </a>
+
+                                                        <div class="p-t-10">
+                                                            <h5 class="p-b-5">
+                                                                <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                    Donec metus orci, malesuada et lectus vitae
+                                                                </a>
+                                                            </h5>
+
+                                                            <span class="cl8">
+                                                                <a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+                                                                    Music
+                                                                </a>
+
+                                                                <span class="f1-s-3 m-rl-3">
+                                                                    -
+                                                                </span>
+
+                                                                <span class="f1-s-3">
+                                                                    Jan 15
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="tab-pane" id="enter-3" role="tabpanel">
+                                            <div class="row">
+                                                <div class="col-3">
+                                                    <!-- Item post -->  
+                                                    <div>
+                                                        <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                            <img src="{{asset('front-assets/images/post-39.jpg')}}" alt="IMG">
+                                                        </a>
+
+                                                        <div class="p-t-10">
+                                                            <h5 class="p-b-5">
+                                                                <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                    Donec metus orci, malesuada et lectus vitae
+                                                                </a>
+                                                            </h5>
+
+                                                            <span class="cl8">
+                                                                <a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+                                                                    Music
+                                                                </a>
+
+                                                                <span class="f1-s-3 m-rl-3">
+                                                                    -
+                                                                </span>
+
+                                                                <span class="f1-s-3">
+                                                                    Feb 18
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-3">
+                                                    <!-- Item post -->  
+                                                    <div>
+                                                        <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                            <img src="{{asset('front-assets/images/post-41.jpg')}}" alt="IMG">
+                                                        </a>
+
+                                                        <div class="p-t-10">
+                                                            <h5 class="p-b-5">
+                                                                <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                    Donec metus orci, malesuada et lectus vitae
+                                                                </a>
+                                                            </h5>
+
+                                                            <span class="cl8">
+                                                                <a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+                                                                    Music
+                                                                </a>
+
+                                                                <span class="f1-s-3 m-rl-3">
+                                                                    -
+                                                                </span>
+
+                                                                <span class="f1-s-3">
+                                                                    Jan 20
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-3">
+                                                    <!-- Item post -->  
+                                                    <div>
+                                                        <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                            <img src="{{asset('front-assets/images/post-42.jpg')}}" alt="IMG">
+                                                        </a>
+
+                                                        <div class="p-t-10">
+                                                            <h5 class="p-b-5">
+                                                                <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                    Donec metus orci, malesuada et lectus vitae
+                                                                </a>
+                                                            </h5>
+
+                                                            <span class="cl8">
+                                                                <a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+                                                                    Music
+                                                                </a>
+
+                                                                <span class="f1-s-3 m-rl-3">
+                                                                    -
+                                                                </span>
+
+                                                                <span class="f1-s-3">
+                                                                    Jan 15
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-3">
+                                                    <!-- Item post -->  
+                                                    <div>
+                                                        <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                            <img src="{{asset('front-assets/images/post-40.jpg')}}" alt="IMG">
+                                                        </a>
+
+                                                        <div class="p-t-10">
+                                                            <h5 class="p-b-5">
+                                                                <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                    Donec metus orci, malesuada et lectus vitae
+                                                                </a>
+                                                            </h5>
+
+                                                            <span class="cl8">
+                                                                <a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+                                                                    Music
+                                                                </a>
+
+                                                                <span class="f1-s-3 m-rl-3">
+                                                                    -
+                                                                </span>
+
+                                                                <span class="f1-s-3">
+                                                                    Feb 12
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="mega-menu-item">
+                                <a href="category-01.html">Business</a>
+
+                                <div class="sub-mega-menu">
+                                    <div class="nav flex-column nav-pills" role="tablist">
+                                        <a class="nav-link active" data-toggle="pill" href="#business-1" role="tab">All</a>
+                                        <a class="nav-link" data-toggle="pill" href="#business-2" role="tab">Economy</a>
+                                    </div>
+
+                                    <div class="tab-content">
+                                        <div class="tab-pane show active" id="business-1" role="tabpanel">
+                                            <div class="row">
+                                                <div class="col-3">
+                                                    <!-- Item post -->  
+                                                    <div>
+                                                        <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                            <img src="{{asset('front-assets/images/post-10.jpg')}}" alt="IMG">
+                                                        </a>
+
+                                                        <div class="p-t-10">
+                                                            <h5 class="p-b-5">
+                                                                <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                    Donec metus orci, malesuada et lectus vitae
+                                                                </a>
+                                                            </h5>
+
+                                                            <span class="cl8">
+                                                                <a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+                                                                    Music
+                                                                </a>
+
+                                                                <span class="f1-s-3 m-rl-3">
+                                                                    -
+                                                                </span>
+
+                                                                <span class="f1-s-3">
+                                                                    Feb 18
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-3">
+                                                    <!-- Item post -->  
+                                                    <div>
+                                                        <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                            <img src="{{asset('front-assets/images/post-11.jpg')}}" alt="IMG">
+                                                        </a>
+
+                                                        <div class="p-t-10">
+                                                            <h5 class="p-b-5">
+                                                                <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                    Donec metus orci, malesuada et lectus vitae
+                                                                </a>
+                                                            </h5>
+
+                                                            <span class="cl8">
+                                                                <a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+                                                                    Music
+                                                                </a>
+
+                                                                <span class="f1-s-3 m-rl-3">
+                                                                    -
+                                                                </span>
+
+                                                                <span class="f1-s-3">
+                                                                    Jan 20
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-3">
+                                                    <!-- Item post -->  
+                                                    <div>
+                                                        <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                            <img src="{{asset('front-assets/images/post-26.jpg')}}" alt="IMG">
+                                                        </a>
+
+                                                        <div class="p-t-10">
+                                                            <h5 class="p-b-5">
+                                                                <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                    Donec metus orci, malesuada et lectus vitae
+                                                                </a>
+                                                            </h5>
+
+                                                            <span class="cl8">
+                                                                <a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+                                                                    Music
+                                                                </a>
+
+                                                                <span class="f1-s-3 m-rl-3">
+                                                                    -
+                                                                </span>
+
+                                                                <span class="f1-s-3">
+                                                                    Feb 12
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-3">
+                                                    <!-- Item post -->  
+                                                    <div>
+                                                        <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                            <img src="{{asset('front-assets/images/post-34.jpg')}}" alt="IMG">
+                                                        </a>
+
+                                                        <div class="p-t-10">
+                                                            <h5 class="p-b-5">
+                                                                <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                    Donec metus orci, malesuada et lectus vitae
+                                                                </a>
+                                                            </h5>
+
+                                                            <span class="cl8">
+                                                                <a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+                                                                    Music
+                                                                </a>
+
+                                                                <span class="f1-s-3 m-rl-3">
+                                                                    -
+                                                                </span>
+
+                                                                <span class="f1-s-3">
+                                                                    Jan 15
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="tab-pane" id="business-2" role="tabpanel">
+                                            <div class="row">
+                                                <div class="col-3">
+                                                    <!-- Item post -->  
+                                                    <div>
+                                                        <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                            <img src="{{asset('front-assets/images/post-35.jpg')}}" alt="IMG">
+                                                        </a>
+
+                                                        <div class="p-t-10">
+                                                            <h5 class="p-b-5">
+                                                                <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                    Donec metus orci, malesuada et lectus vitae
+                                                                </a>
+                                                            </h5>
+
+                                                            <span class="cl8">
+                                                                <a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+                                                                    Music
+                                                                </a>
+
+                                                                <span class="f1-s-3 m-rl-3">
+                                                                    -
+                                                                </span>
+
+                                                                <span class="f1-s-3">
+                                                                    Feb 18
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-3">
+                                                    <!-- Item post -->  
+                                                    <div>
+                                                        <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                            <img src="{{asset('front-assets/images/post-36.jpg')}}" alt="IMG">
+                                                        </a>
+
+                                                        <div class="p-t-10">
+                                                            <h5 class="p-b-5">
+                                                                <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                    Donec metus orci, malesuada et lectus vitae
+                                                                </a>
+                                                            </h5>
+
+                                                            <span class="cl8">
+                                                                <a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+                                                                    Music
+                                                                </a>
+
+                                                                <span class="f1-s-3 m-rl-3">
+                                                                    -
+                                                                </span>
+
+                                                                <span class="f1-s-3">
+                                                                    Feb 12
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-3">
+                                                    <!-- Item post -->  
+                                                    <div>
+                                                        <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                            <img src="{{asset('front-assets/images/post-37.jpg')}}" alt="IMG">
+                                                        </a>
+
+                                                        <div class="p-t-10">
+                                                            <h5 class="p-b-5">
+                                                                <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                    Donec metus orci, malesuada et lectus vitae
+                                                                </a>
+                                                            </h5>
+
+                                                            <span class="cl8">
+                                                                <a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+                                                                    Music
+                                                                </a>
+
+                                                                <span class="f1-s-3 m-rl-3">
+                                                                    -
+                                                                </span>
+
+                                                                <span class="f1-s-3">
+                                                                    Jan 20
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-3">
+                                                    <!-- Item post -->  
+                                                    <div>
+                                                        <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                            <img src="{{asset('front-assets/images/post-38.jpg')}}" alt="IMG">
+                                                        </a>
+
+                                                        <div class="p-t-10">
+                                                            <h5 class="p-b-5">
+                                                                <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                    Donec metus orci, malesuada et lectus vitae
+                                                                </a>
+                                                            </h5>
+
+                                                            <span class="cl8">
+                                                                <a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+                                                                    Music
+                                                                </a>
+
+                                                                <span class="f1-s-3 m-rl-3">
+                                                                    -
+                                                                </span>
+
+                                                                <span class="f1-s-3">
+                                                                    Jan 15
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="mega-menu-item">
+                                <a href="category-02.html">Travel</a>
+
+                                <div class="sub-mega-menu">
+                                    <div class="nav flex-column nav-pills" role="tablist">
+                                        <a class="nav-link active" data-toggle="pill" href="#travel-1" role="tab">All</a>
+                                        <a class="nav-link" data-toggle="pill" href="#travel-2" role="tab">Hotels</a>
+                                    </div>
+
+                                    <div class="tab-content">
+                                        <div class="tab-pane show active" id="travel-1" role="tabpanel">
+                                            <div class="row">
+                                                <div class="col-3">
+                                                    <!-- Item post -->  
+                                                    <div>
+                                                        <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                            <img src="{{asset('front-assets/images/post-39.jpg')}}" alt="IMG">
+                                                        </a>
+
+                                                        <div class="p-t-10">
+                                                            <h5 class="p-b-5">
+                                                                <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                    Donec metus orci, malesuada et lectus vitae
+                                                                </a>
+                                                            </h5>
+
+                                                            <span class="cl8">
+                                                                <a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+                                                                    Music
+                                                                </a>
+
+                                                                <span class="f1-s-3 m-rl-3">
+                                                                    -
+                                                                </span>
+
+                                                                <span class="f1-s-3">
+                                                                    Feb 18
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-3">
+                                                    <!-- Item post -->  
+                                                    <div>
+                                                        <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                            <img src="{{asset('front-assets/images/post-41.jpg')}}" alt="IMG">
+                                                        </a>
+
+                                                        <div class="p-t-10">
+                                                            <h5 class="p-b-5">
+                                                                <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                    Donec metus orci, malesuada et lectus vitae
+                                                                </a>
+                                                            </h5>
+
+                                                            <span class="cl8">
+                                                                <a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+                                                                    Music
+                                                                </a>
+
+                                                                <span class="f1-s-3 m-rl-3">
+                                                                    -
+                                                                </span>
+
+                                                                <span class="f1-s-3">
+                                                                    Jan 20
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-3">
+                                                    <!-- Item post -->  
+                                                    <div>
+                                                        <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                            <img src="{{asset('front-assets/images/post-42.jpg')}}" alt="IMG">
+                                                        </a>
+
+                                                        <div class="p-t-10">
+                                                            <h5 class="p-b-5">
+                                                                <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                    Donec metus orci, malesuada et lectus vitae
+                                                                </a>
+                                                            </h5>
+
+                                                            <span class="cl8">
+                                                                <a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+                                                                    Music
+                                                                </a>
+
+                                                                <span class="f1-s-3 m-rl-3">
+                                                                    -
+                                                                </span>
+
+                                                                <span class="f1-s-3">
+                                                                    Jan 15
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-3">
+                                                    <!-- Item post -->  
+                                                    <div>
+                                                        <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                            <img src="{{asset('front-assets/images/post-40.jpg')}}" alt="IMG">
+                                                        </a>
+
+                                                        <div class="p-t-10">
+                                                            <h5 class="p-b-5">
+                                                                <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                    Donec metus orci, malesuada et lectus vitae
+                                                                </a>
+                                                            </h5>
+
+                                                            <span class="cl8">
+                                                                <a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+                                                                    Music
+                                                                </a>
+
+                                                                <span class="f1-s-3 m-rl-3">
+                                                                    -
+                                                                </span>
+
+                                                                <span class="f1-s-3">
+                                                                    Feb 12
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="tab-pane" id="travel-2" role="tabpanel">
+                                            <div class="row">
+                                                <div class="col-3">
+                                                    <!-- Item post -->  
+                                                    <div>
+                                                        <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                            <img src="{{asset('front-assets/images/post-35.jpg')}}" alt="IMG">
+                                                        </a>
+
+                                                        <div class="p-t-10">
+                                                            <h5 class="p-b-5">
+                                                                <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                    Donec metus orci, malesuada et lectus vitae
+                                                                </a>
+                                                            </h5>
+
+                                                            <span class="cl8">
+                                                                <a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+                                                                    Music
+                                                                </a>
+
+                                                                <span class="f1-s-3 m-rl-3">
+                                                                    -
+                                                                </span>
+
+                                                                <span class="f1-s-3">
+                                                                    Feb 18
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-3">
+                                                    <!-- Item post -->  
+                                                    <div>
+                                                        <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                            <img src="{{asset('front-assets/images/post-36.jpg')}}" alt="IMG">
+                                                        </a>
+
+                                                        <div class="p-t-10">
+                                                            <h5 class="p-b-5">
+                                                                <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                    Donec metus orci, malesuada et lectus vitae
+                                                                </a>
+                                                            </h5>
+
+                                                            <span class="cl8">
+                                                                <a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+                                                                    Music
+                                                                </a>
+
+                                                                <span class="f1-s-3 m-rl-3">
+                                                                    -
+                                                                </span>
+
+                                                                <span class="f1-s-3">
+                                                                    Feb 12
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-3">
+                                                    <!-- Item post -->  
+                                                    <div>
+                                                        <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                            <img src="{{asset('front-assets/images/post-37.jpg')}}" alt="IMG">
+                                                        </a>
+
+                                                        <div class="p-t-10">
+                                                            <h5 class="p-b-5">
+                                                                <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                    Donec metus orci, malesuada et lectus vitae
+                                                                </a>
+                                                            </h5>
+
+                                                            <span class="cl8">
+                                                                <a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+                                                                    Music
+                                                                </a>
+
+                                                                <span class="f1-s-3 m-rl-3">
+                                                                    -
+                                                                </span>
+
+                                                                <span class="f1-s-3">
+                                                                    Jan 20
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-3">
+                                                    <!-- Item post -->  
+                                                    <div>
+                                                        <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                            <img src="{{asset('front-assets/images/post-38.jpg')}}" alt="IMG">
+                                                        </a>
+
+                                                        <div class="p-t-10">
+                                                            <h5 class="p-b-5">
+                                                                <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                    Donec metus orci, malesuada et lectus vitae
+                                                                </a>
+                                                            </h5>
+
+                                                            <span class="cl8">
+                                                                <a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+                                                                    Music
+                                                                </a>
+
+                                                                <span class="f1-s-3 m-rl-3">
+                                                                    -
+                                                                </span>
+
+                                                                <span class="f1-s-3">
+                                                                    Jan 15
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="mega-menu-item">
+                                <a href="category-01.html">Life Style</a>
+
+                                <div class="sub-mega-menu">
+                                    <div class="nav flex-column nav-pills" role="tablist">
+                                        <a class="nav-link active" data-toggle="pill" href="#life-1" role="tab">All</a>
+                                    </div>
+
+                                    <div class="tab-content">
+                                        <div class="tab-pane show active" id="life-1" role="tabpanel">
+                                            <div class="row">
+                                                <div class="col-3">
+                                                    <!-- Item post -->  
+                                                    <div>
+                                                        <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                            <img src="{{asset('front-assets/images/post-25.jpg')}}" alt="IMG">
+                                                        </a>
+
+                                                        <div class="p-t-10">
+                                                            <h5 class="p-b-5">
+                                                                <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                    Donec metus orci, malesuada et lectus vitae
+                                                                </a>
+                                                            </h5>
+
+                                                            <span class="cl8">
+                                                                <a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+                                                                    Music
+                                                                </a>
+
+                                                                <span class="f1-s-3 m-rl-3">
+                                                                    -
+                                                                </span>
+
+                                                                <span class="f1-s-3">
+                                                                    Feb 18
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-3">
+                                                    <!-- Item post -->  
+                                                    <div>
+                                                        <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                            <img src="{{asset('front-assets/images/post-27.jpg')}}" alt="IMG">
+                                                        </a>
+
+                                                        <div class="p-t-10">
+                                                            <h5 class="p-b-5">
+                                                                <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                    Donec metus orci, malesuada et lectus vitae
+                                                                </a>
+                                                            </h5>
+
+                                                            <span class="cl8">
+                                                                <a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+                                                                    Music
+                                                                </a>
+
+                                                                <span class="f1-s-3 m-rl-3">
+                                                                    -
+                                                                </span>
+
+                                                                <span class="f1-s-3">
+                                                                    Jan 20
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-3">
+                                                    <!-- Item post -->  
+                                                    <div>
+                                                        <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                            <img src="{{asset('front-assets/images/post-26.jpg')}}" alt="IMG">
+                                                        </a>
+
+                                                        <div class="p-t-10">
+                                                            <h5 class="p-b-5">
+                                                                <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                    Donec metus orci, malesuada et lectus vitae
+                                                                </a>
+                                                            </h5>
+
+                                                            <span class="cl8">
+                                                                <a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+                                                                    Music
+                                                                </a>
+
+                                                                <span class="f1-s-3 m-rl-3">
+                                                                    -
+                                                                </span>
+
+                                                                <span class="f1-s-3">
+                                                                    Feb 12
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-3">
+                                                    <!-- Item post -->  
+                                                    <div>
+                                                        <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                            <img src="{{asset('front-assets/images/post-34.jpg')}}" alt="IMG">
+                                                        </a>
+
+                                                        <div class="p-t-10">
+                                                            <h5 class="p-b-5">
+                                                                <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                    Donec metus orci, malesuada et lectus vitae
+                                                                </a>
+                                                            </h5>
+
+                                                            <span class="cl8">
+                                                                <a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+                                                                    Music
+                                                                </a>
+
+                                                                <span class="f1-s-3 m-rl-3">
+                                                                    -
+                                                                </span>
+
+                                                                <span class="f1-s-3">
+                                                                    Jan 15
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="mega-menu-item">
+                                <a href="category-02.html">Video</a>
+
+                                <div class="sub-mega-menu">
+                                    <div class="nav flex-column nav-pills" role="tablist">
+                                        <a class="nav-link active" data-toggle="pill" href="#video-1" role="tab">All</a>
+                                    </div>
+
+                                    <div class="tab-content">
+                                        <div class="tab-pane show active" id="video-1" role="tabpanel">
+                                            <div class="row">
+                                                <div class="col-3">
+                                                    <!-- Item post -->  
+                                                    <div>
+                                                        <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                            <img src="{{asset('front-assets/images/post-50.jpg')}}" alt="IMG">
+                                                        </a>
+
+                                                        <div class="p-t-10">
+                                                            <h5 class="p-b-5">
+                                                                <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                    Donec metus orci, malesuada et lectus vitae
+                                                                </a>
+                                                            </h5>
+
+                                                            <span class="cl8">
+                                                                <a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+                                                                    Music
+                                                                </a>
+
+                                                                <span class="f1-s-3 m-rl-3">
+                                                                    -
+                                                                </span>
+
+                                                                <span class="f1-s-3">
+                                                                    Feb 18
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-3">
+                                                    <!-- Item post -->  
+                                                    <div>
+                                                        <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                            <img src="{{asset('front-assets/images/post-08.jpg')}}" alt="IMG">
+                                                        </a>
+
+                                                        <div class="p-t-10">
+                                                            <h5 class="p-b-5">
+                                                                <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                    Donec metus orci, malesuada et lectus vitae
+                                                                </a>
+                                                            </h5>
+
+                                                            <span class="cl8">
+                                                                <a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+                                                                    Music
+                                                                </a>
+
+                                                                <span class="f1-s-3 m-rl-3">
+                                                                    -
+                                                                </span>
+
+                                                                <span class="f1-s-3">
+                                                                    Feb 12
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-3">
+                                                    <!-- Item post -->  
+                                                    <div>
+                                                        <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                            <img src="{{asset('front-assets/images/post-07.jpg')}}" alt="IMG">
+                                                        </a>
+
+                                                        <div class="p-t-10">
+                                                            <h5 class="p-b-5">
+                                                                <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                    Donec metus orci, malesuada et lectus vitae
+                                                                </a>
+                                                            </h5>
+
+                                                            <span class="cl8">
+                                                                <a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+                                                                    Music
+                                                                </a>
+
+                                                                <span class="f1-s-3 m-rl-3">
+                                                                    -
+                                                                </span>
+
+                                                                <span class="f1-s-3">
+                                                                    Jan 20
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-3">
+                                                    <!-- Item post -->  
+                                                    <div>
+                                                        <a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+                                                            <img src="{{asset('front-assets/images/post-06.jpg')}}" alt="IMG">
+                                                        </a>
+
+                                                        <div class="p-t-10">
+                                                            <h5 class="p-b-5">
+                                                                <a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+                                                                    Donec metus orci, malesuada et lectus vitae
+                                                                </a>
+                                                            </h5>
+
+                                                            <span class="cl8">
+                                                                <a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
+                                                                    Music
+                                                                </a>
+
+                                                                <span class="f1-s-3 m-rl-3">
+                                                                    -
+                                                                </span>
+
+                                                                <span class="f1-s-3">
+                                                                    Jan 15
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <a href="#">Features</a>
+                                <ul class="sub-menu">
+                                    <li><a href="category-01.html">Category Page v1</a></li>
+                                    <li><a href="category-02.html">Category Page v2</a></li>
+                                    <li><a href="blog-grid.html">Blog Grid Sidebar</a></li>
+                                    <li><a href="blog-list-01.html">Blog List Sidebar v1</a></li>
+                                    <li><a href="blog-list-02.html">Blog List Sidebar v2</a></li>
+                                    <li><a href="blog-detail-01.html">Blog Detail Sidebar</a></li>
+                                    <li><a href="blog-detail-02.html">Blog Detail No Sidebar</a></li>
+                                    <li><a href="about.html">About Us</a></li>
+                                    <li><a href="contact.html">Contact Us</a></li>
+                                </ul>
+                            </li>
+                            
+
+                        </ul>
+                    </nav>
+                </div>
+            </div>  
+        </div>
+    </header>
+    
+    @yield('main-content')        
+
+    <!-- Footer -->
+    <footer>
+        <div class="bg2 p-t-40 p-b-25">
+            <div class="container" id>
+                <div class="row">
+                    <div class="col-lg-4 p-b-20">
+                        <div class="size-h-3 flex-s-c">
+                            <a href="index.html">
+                                <img class="max-s-full" src="{{asset('front-assets/images/icons/logo-02.png')}}" alt="LOGO">
+                            </a>
+                        </div>
+
+                        <div>
+                            <p class="f1-s-1 cl11 p-b-16">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tempor magna eget elit efficitur, at accumsan sem placerat. Nulla tellus libero, mattis nec molestie at, facilisis ut turpis. Vestibulum dolor metus, tincidunt eget odio
+                            </p>
+
+                            <p class="f1-s-1 cl11 p-b-16">
+                                Any questions? Call us on (+1) 96 716 6879
+                            </p>
+
+                            <div class="p-t-15">
+                                <a href="#" class="fs-18 cl11 hov-cl10 trans-03 m-r-8">
+                                    <span class="fab fa-facebook-f"></span>
+                                </a>
+
+                                <a href="#" class="fs-18 cl11 hov-cl10 trans-03 m-r-8">
+                                    <span class="fab fa-twitter"></span>
+                                </a>
+
+                                <a href="#" class="fs-18 cl11 hov-cl10 trans-03 m-r-8">
+                                    <span class="fab fa-pinterest-p"></span>
+                                </a>
+
+                                <a href="#" class="fs-18 cl11 hov-cl10 trans-03 m-r-8">
+                                    <span class="fab fa-vimeo-v"></span>
+                                </a>
+
+                                <a href="#" class="fs-18 cl11 hov-cl10 trans-03 m-r-8">
+                                    <span class="fab fa-youtube"></span>
+                                </a>
                             </div>
                         </div>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-4 p-b-20">
+                        <div class="size-h-3 flex-s-c">
+                            <h5 class="f1-m-7 cl0">
+                                Popular Posts
+                            </h5>
+                        </div>
+
+                        <ul>
+                            <li class="flex-wr-sb-s p-b-20">
+                                <a href="#" class="size-w-4 wrap-pic-w hov1 trans-03">
+                                    <img src="{{asset('front-assets/images/popular-post-01.jpg')}}" alt="IMG">
+                                </a>
+
+                                <div class="size-w-5">
+                                    <h6 class="p-b-5">
+                                        <a href="#" class="f1-s-5 cl11 hov-cl10 trans-03">
+                                            Donec metus orci, malesuada et lectus vitae
+                                        </a>
+                                    </h6>
+
+                                    <span class="f1-s-3 cl6">
+                                        Feb 17
+                                    </span>
+                                </div>
+                            </li>
+
+                            <li class="flex-wr-sb-s p-b-20">
+                                <a href="#" class="size-w-4 wrap-pic-w hov1 trans-03">
+                                    <img src="{{asset('front-assets/images/popular-post-02.jpg')}}" alt="IMG">
+                                </a>
+
+                                <div class="size-w-5">
+                                    <h6 class="p-b-5">
+                                        <a href="#" class="f1-s-5 cl11 hov-cl10 trans-03">
+                                            Lorem ipsum dolor sit amet, consectetur
+                                        </a>
+                                    </h6>
+
+                                    <span class="f1-s-3 cl6">
+                                        Feb 16
+                                    </span>
+                                </div>
+                            </li>
+
+                            <li class="flex-wr-sb-s p-b-20">
+                                <a href="#" class="size-w-4 wrap-pic-w hov1 trans-03">
+                                    <img src="{{asset('front-assets/images/popular-post-03.jpg')}}" alt="IMG">
+                                </a>
+
+                                <div class="size-w-5">
+                                    <h6 class="p-b-5">
+                                        <a href="#" class="f1-s-5 cl11 hov-cl10 trans-03">
+                                            Suspendisse dictum enim quis imperdiet auctor
+                                        </a>
+                                    </h6>
+
+                                    <span class="f1-s-3 cl6">
+                                        Feb 15
+                                    </span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-4 p-b-20">
+                        <div class="size-h-3 flex-s-c">
+                            <h5 class="f1-m-7 cl0">
+                                Category
+                            </h5>
+                        </div>
+
+                        <ul class="m-t--12">
+                            <li class="how-bor1 p-rl-5 p-tb-10">
+                                <a href="#" class="f1-s-5 cl11 hov-cl10 trans-03 p-tb-8">
+                                    Fashion (22)
+                                </a>
+                            </li>
+
+                            <li class="how-bor1 p-rl-5 p-tb-10">
+                                <a href="#" class="f1-s-5 cl11 hov-cl10 trans-03 p-tb-8">
+                                    Technology (29)
+                                </a>
+                            </li>
+
+                            <li class="how-bor1 p-rl-5 p-tb-10">
+                                <a href="#" class="f1-s-5 cl11 hov-cl10 trans-03 p-tb-8">
+                                    Street Style (15)
+                                </a>
+                            </li>
+
+                            <li class="how-bor1 p-rl-5 p-tb-10">
+                                <a href="#" class="f1-s-5 cl11 hov-cl10 trans-03 p-tb-8">
+                                    Life Style (28)
+                                </a>
+                            </li>
+
+                            <li class="how-bor1 p-rl-5 p-tb-10">
+                                <a href="#" class="f1-s-5 cl11 hov-cl10 trans-03 p-tb-8">
+                                    DIY & Crafts (16)
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
-       <!-- footer-bottom aera -->
-       <div class="footer-bottom-area">
-           <div class="container">
-               <div class="footer-border">
-                    <div class="row d-flex align-items-center justify-content-between">
-                        <div class="col-lg-6">
-                            <div class="footer-copy-right">
-                                <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                                      Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="ti-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-                                      <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="footer-menu f-right">
-                                <ul>                             
-                                    <li><a href="#">Terms of use</a></li>
-                                    <li><a href="#">Privacy Policy</a></li>
-                                    <li><a href="#">Contact</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-               </div>
-           </div>
-       </div>
-       <!-- Footer End-->
-   </footer>
-   
-	<!-- JS here -->
-	
-		<!-- All JS Custom Plugins Link Here here -->
-        <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
-		<!-- Jquery, Popper, Bootstrap -->
-		<script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
-        <script src="./assets/js/popper.min.js"></script>
-        <script src="./assets/js/bootstrap.min.js"></script>
-	    <!-- Jquery Mobile Menu -->
-        <script src="./assets/js/jquery.slicknav.min.js"></script>
 
-		<!-- Jquery Slick , Owl-Carousel Plugins -->
-        <script src="./assets/js/owl.carousel.min.js"></script>
-        <script src="./assets/js/slick.min.js"></script>
-        <!-- Date Picker -->
-        <script src="./assets/js/gijgo.min.js"></script>
-		<!-- One Page, Animated-HeadLin -->
-        <script src="./assets/js/wow.min.js"></script>
-		<script src="./assets/js/animated.headline.js"></script>
-        <script src="./assets/js/jquery.magnific-popup.js"></script>
+        <div class="bg11">
+            <div class="container size-h-4 flex-c-c p-tb-15">
+                <span class="f1-s-1 cl0 txt-center">
+                    Copyright © 2018 
+                    <a href="#" class="f1-s-1 cl10 hov-link1"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                       Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> 
+                    by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                </span>
+            </div>
+        </div>
+    </footer>
 
-        <!-- Breaking New Pluging -->
-        <script src="./assets/js/jquery.ticker.js"></script>
-        <script src="./assets/js/site.js"></script>
+    <!-- Back to top -->
+    <div class="btn-back-to-top" id="myBtn">
+        <span class="symbol-btn-back-to-top">
+            <span class="fas fa-angle-up"></span>
+        </span>
+    </div>
 
-		<!-- Scrollup, nice-select, sticky -->
-        <script src="./assets/js/jquery.scrollUp.min.js"></script>
-        <script src="./assets/js/jquery.nice-select.min.js"></script>
-		<script src="./assets/js/jquery.sticky.js"></script>
-        
-        <!-- contact js -->
-        <script src="./assets/js/contact.js"></script>
-        <script src="./assets/js/jquery.form.js"></script>
-        <script src="./assets/js/jquery.validate.min.js"></script>
-        <script src="./assets/js/mail-script.js"></script>
-        <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
-        
-		<!-- Jquery Plugins, main Jquery -->	
-        <script src="./assets/js/plugins.js"></script>
-        <script src="./assets/js/main.js"></script>
-        
-    </body>
+    <!-- Modal Video 01-->
+    <div class="modal fade" id="modal-video-01" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document" data-dismiss="modal">
+            <div class="close-mo-video-01 trans-0-4" data-dismiss="modal" aria-label="Close">&times;</div>
+
+            <div class="wrap-video-mo-01">
+                <div class="video-mo-01">
+                    <iframe src="https://www.youtube.com/embed/wJnBTPUQS5A?rel=0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @include('layout.footer')    
+
+    <script>
+        const slider = document.querySelector('.main-menu');
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        slider.addEventListener('mousedown', (e) => {
+          isDown = true;
+          slider.classList.add('active');
+          startX = e.pageX - slider.offsetLeft;
+          scrollLeft = slider.scrollLeft;
+        });
+        slider.addEventListener('mouseleave', () => {
+          isDown = false;
+          slider.classList.remove('active');
+        });
+        slider.addEventListener('mouseup', () => {
+          isDown = false;
+          slider.classList.remove('active');
+        });
+        slider.addEventListener('mousemove', (e) => {
+          if (!isDown) return;
+          e.preventDefault();
+          const x = e.pageX - slider.offsetLeft;
+          const walk = (x - startX) * 2; // speed
+          slider.scrollLeft = scrollLeft - walk;
+        });
+
+        // Mobile touch support
+        slider.addEventListener('touchstart', (e) => {
+          startX = e.touches[0].pageX - slider.offsetLeft;
+          scrollLeft = slider.scrollLeft;
+        });
+        slider.addEventListener('touchmove', (e) => {
+          const x = e.touches[0].pageX - slider.offsetLeft;
+          const walk = (x - startX) * 2;
+          slider.scrollLeft = scrollLeft - walk;
+        });
+    </script>
+
+</body>
 </html>

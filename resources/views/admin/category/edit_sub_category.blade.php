@@ -48,7 +48,16 @@
                               <input type="number" min="1" class="form-control" name="order" id="order" placeholder="Category Order" value="{{$subCategory[0]->order}}">
                         </div>
                    </div>
-              </div>              
+              </div>     
+              <div class="form-group mt-2">                    
+                  <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="thumbnail" name="thumbnail"> 
+                    <label class="custom-file-label" for="thumbnail">Thumbnail Img (optional)</label>
+                  </div>
+                  @if(!is_null($subCategory[0]->image))
+                       <img src="{{asset('image/category-img/'.$subCategory[0]->image)}}" width="60" class="img-thumbnail">
+                  @endif
+              </div>         
               <div class="form-group">
                   <label>Description</label>
                   <textarea class="form-control" name="description" id="description" rows="2" placeholder="Description">{{$subCategory[0]->description}}</textarea>
