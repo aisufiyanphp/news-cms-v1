@@ -10,18 +10,18 @@
 
     <div class="card shadow-sm">
         <div class="card-header bg-dark text-white">
-            <h4 class="mb-0">News Details</h4>
+            <h4 class="mb-0">Artical Details</h4>
         </div>
 
         <div class="card-body">
 
             <!-- Title -->
-            <h3 class="mb-3"><?= $news->title; ?></h3>
+            <h3 class="mb-3">{{ $news->title; }}</h3>
 
             <!-- Thumbnail -->
             <?php if(!empty($news->thumbnail)) { ?>
                 <div class="text-center mb-4">
-                    <img src="{{asset('image').'/'.$news->thumbnail}}" 
+                    <img src="{{asset('image/news-img').'/'.$news->thumbnail}}" 
                          class="img-fluid rounded shadow" 
                          style="max-width:350px;">
                 </div>
@@ -34,27 +34,27 @@
                     <table class="table table-bordered">
                         <tr>
                             <th>Category</th>
-                            <td><?= $news->category_id; ?></td>
+                            <td>{{ $news->category_id; }}</td>
                         </tr>
                         <tr>
                             <th>Sub Category</th>
-                            <td><?= $news->title; ?></td>
+                            <td>{{ $news->sub_category_id; }}</td>
                         </tr>
                         <tr>
                             <th>Status</th>
-                            <td><?= ($news->status == 1 ? 'Published' : 'Draft'); ?></td>
+                            <td>{{ ($news->status == 1 ? 'Published' : 'Draft'); }}</td>
                         </tr>
                         <tr>
                             <th>Publish Date</th>
-                            <td><?= $news->publish_date; ?></td>
+                            <td>{{ $news->publish_date; }}</td>
                         </tr>
                         <tr>
                             <th>Publish Time</th>
-                            <td><?= $news->publish_time; ?></td>
+                            <td>{{ $news->publish_time; }}</td>
                         </tr>
                         <tr>
                             <th>Publish End Date</th>
-                            <td><?= $news->publish_end_date; ?></td>
+                            <td>{{ $news->publish_end_date; }}</td>
                         </tr>
                     </table>
                 </div>
@@ -63,27 +63,27 @@
                     <table class="table table-bordered">
                         <tr>
                             <th>Slug</th>
-                            <td><?= $news->slug; ?></td>
+                            <td>{{ $news->slug; }}</td>
                         </tr>
                         <tr>
                             <th>Meta Title</th>
-                            <td><?= $news->meta_title; ?></td>
+                            <td>{{ $news->meta_title; }}</td>
                         </tr>
                         <tr>
                             <th>Meta Keywords</th>
-                            <td><?= $news->meta_keywords; ?></td>
+                            <td>{{ $news->meta_keywords; }}</td>
                         </tr>
                         <tr>
                             <th>Meta Description</th>
-                            <td><?= $news->meta_description; ?></td>
+                            <td>{{ $news->meta_description; }}</td>
                         </tr>
                         <tr>
                             <th>Created At</th>
-                            <td><?= $news->created_at; ?></td>
+                            <td>{{ $news->created_at; }}</td>
                         </tr>
                         <tr>
                             <th>Updated At</th>
-                            <td><?= $news->updated_at; ?></td>
+                            <td>{{ $news->updated_at; }}</td>
                         </tr>
                     </table>
                 </div>
@@ -94,13 +94,13 @@
             <div class="mt-4">
                 <h5>Description</h5>
                 <div class="border p-3" style="background:#fafafa;">
-                    <?= $news->description; ?>
+                    {!! $news->description; !!}
                 </div>
             </div>
 
             <!-- Back Button -->
             <div class="mt-4 text-right">
-                <a href="" class="btn btn-secondary">
+                <a href="{{route('admin.news.list')}}" class="btn btn-outline-primary" title="News List">
                     Back to News List
                 </a>
             </div>

@@ -106,14 +106,13 @@
 <script>
   $(function () {
 
-    $("#example1").DataTable({
+    let table = $("#example1").DataTable({
       "responsive": true,
       "lengthChange": true, 
       "autoWidth": true,      
       "ordering": false,
-      //"buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-    });
-    //.buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+      "stateSave": true
+    });        
 
   });
 </script>

@@ -8,7 +8,7 @@
 <div class="container-fluid">
   <div class="card"> 
     <div class="card-body">
-      <form action="{{route('admin.submit.add.news')}}" method="post" enctype="multipart/form-data" id="editNewsForm">
+      <form action="{{route('admin.submit.edit.news')}}" method="post" enctype="multipart/form-data" id="editNewsForm">
         @csrf
         <input type="hidden" name="news_id" value="{{$news[0]->id}}">
       	<div class="row"> 
@@ -100,12 +100,10 @@
               <div class="form-group mt-2">                    
                   <div class="custom-file">
                     <input type="file" class="custom-file-input" id="thumbnail" name="thumbnail"> 
-                    <label class="custom-file-label" for="thumbnail">Thumbnail Img</label>
+                    <label class="custom-file-label" for="thumbnail">Thumbnail Img (optional)</label>
                   </div>
                   @if(!is_null($news[0]->thumbnail))                      
-                      <img src="{{asset('image/'.$news[0]->thumbnail)}}" width="80" class="img-thumbnail">
-                  @else
-                      <p class="text-info">Image not upload</p>
+                      <img src="{{asset('image/news-img/'.$news[0]->thumbnail)}}" width="80" class="img-thumbnail">                  
                   @endif                  
               </div>              
 
@@ -156,22 +154,41 @@
 <script src="{{asset('admin-assets/plugins/moment/moment.min.js')}}"></script>
 <!-- Tempusdominus Bootstrap 4 -->
 <script src="{{asset('admin-assets/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js')}}"></script>
-<!-- Ckeditor -->
-<script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
+<!-- Ckeditor 5 -->
+<!-- <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script> -->
+<!-- Ckeditor 4 -->
+<script src="https://cdn.ckeditor.com/4.22.1/full/ckeditor.js"></script>
 <!-- just validate -->
 <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
 @endpush
 
 @push('bottom_scripts')
 <script>
-ClassicEditor
-  .create(document.querySelector('#description'), {
-    ckfinder: {
-      //{{--uploadUrl: "{{ route('admin.news.upload-image').'?_token='.csrf_token() }}"--}}
-    }
-  }).catch(error => {
-    console.error(error);
-  });
+// ckeditor 5 code  
+// ClassicEditor
+//   .create(document.querySelector('#description'), {
+//     ckfinder: {
+//       uploadUrl: "{{ route('admin.upload.thumbnail').'?_token='.csrf_token() }}"
+//       //{{--uploadUrl: "{{ route('admin.news.upload-image').'?_token='.csrf_token() }}"--}}
+//     }
+//   }).catch(error => {
+//     console.error(error);
+//   });
+
+// ckeditor 4 code
+// CKEDITOR.replace('description', {
+//     height: 500,
+//     filebrowserUploadUrl: "{{ route('admin.upload.thumbnail') }}?_token={{ csrf_token() }}",
+//     filebrowserUploadMethod: 'form'
+// });  
+
+CKEDITOR.replace('description', {
+  height: 500,
+  extraPlugins: 'uploadimage,clipboard',
+  filebrowserUploadUrl: "{{ route('admin.upload.thumbnail') }}?_token={{ csrf_token() }}",
+  filebrowserUploadMethod: 'form',
+  clipboardUpload: true
+});    
 </script>
 
 <script>
@@ -277,13 +294,12 @@ $(document).ready(function(){
            contentType: false,
            processData: false,
            beforeSend: function(){                           
-              //showBtnProcess('#editNewsForm button');
+              showBtnProcess('#editNewsForm button');
            },
            success: function(response){
-              console.log(response);    
-              return false;
-
-              hideBtnProcess('#editNewsForm button');              
+              console.log(response);                  
+              hideBtnProcess('#editNewsForm button'); 
+              //return false;             
               if(response.status){
                  event.target.reset();
                  newsValidator.refresh();

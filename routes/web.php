@@ -16,43 +16,8 @@ use Illuminate\Support\Collection;
 
 
 Route::get('test', function () {
-    // $arr = ['columns' => ['title' => ['first_title', 'second_title'], 'body' => ['first_body', 'second_body']]];    
-    // $collect = collect($arr);
-    // debug($collect, false);
-    // echo "<hr>";
-    // $collection = $collect->map(function($item){
-    //      if(isset($item['title'])){
-    //          debug($item['title'], false);
-    //          //return $item['title'];
-    //      }
-    //      if(isset($item['body'])){
-    //          debug($item['body'], false);
-    //          //return $item['body'];
-    //      }
-    //      if(isset($item['test'])){
-    //          debug($item['test'], false);
-    //          //return $item['test'];
-    //      }else{
-    //          echo "Test is not set";
-    //      }          
-    // });
-    // debug($collection);    
-
-    // Collection::macro('toLocale', function (string $locale) {
-    //     return $this->map(function (string $value) use ($locale) {
-    //         //return Lang::get($value, [], $locale);
-    //         return ($value === $locale) ? $value : "Not Matched";
-    //     });
-    // });
-     
-    // $collection = collect(['first', 'second']);
-     
-    // $translated = $collection->toLocale('en');
-    // debug($translated);
-
-    echo URL::signedRoute('unsubscribe', ['user' => 1])."<br>";
-    echo URL::signedRoute('unsubscribe', ['user' => 1], absolute: false);
-
+    $uploadDir = public_path('image/news/');
+    echo $uploadDir;
 
 })->name('unsubscribe');
 

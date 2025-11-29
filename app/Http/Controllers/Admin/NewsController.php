@@ -72,14 +72,14 @@ class NewsController extends Controller
 
         try{
 
-            if($request->hasFile('thumbnail')){
+            if($request->hasFile('thumbnail') && $request->file('thumbnail')->isValid()){
                 
-                $uploadDir = public_path('image');
-                $file = $request->file('thumbnail');  
-                $ext  = $file->extension();
-                $filename = uniqid(time()).".".$ext;
-                $file->move($uploadDir, $filename);
-
+                $uploadDir = public_path('image/news-img');
+                // $file = $request->file('thumbnail');  
+                // $ext  = $file->extension();
+                // $filename = uniqid(time()).".".$ext;
+                // $file->move($uploadDir, $filename);
+                $filename = fileUploads($request->file('thumbnail'), $uploadDir);
             }else{
                 $filename = NULL;
             }
@@ -110,7 +110,7 @@ class NewsController extends Controller
 
     public function editNews($id){        
         $categoris = CategoryModel::getCategory();
-        $news = News::where('id', $id)->get();
+        $news = News::where('id', $id)->get();        
         $subCategories = SubCategoryModel::where('category_id', $news[0]->category_id)->orderBy('id', 'desc')->get();        
         if(count($news) > 0){
            return view('admin.news.edit_news', compact('categoris', 'news', 'subCategories'));                                                    
@@ -119,8 +119,7 @@ class NewsController extends Controller
         
     }
 
-    public function submitEditNews(Request $request){
-                   
+    public function submitEditNews(Request $request){               
         $validator = Validator::make($request->all(), [
             "news_id" => "required|integer|exists:news,id",
             "title" => "required|min:3|max:80|unique:news,title,".$request->input('news_id').",id",
@@ -144,16 +143,13 @@ class NewsController extends Controller
                         
             $news = News::findOrFail($request->input('news_id'));                                                          
             if($request->hasFile('thumbnail') && $request->file('thumbnail')->isValid()){                      
-                $uploadDir = public_path('image');
+                $uploadDir = public_path('image/news-img');
                 if(!is_null($news->thumbnail)){
                    if(file_exists($uploadDir."/".$news->thumbnail)){
                       unlink($uploadDir."/".$news->thumbnail);
                    }
-                }                                
-                $file = $request->file('thumbnail');  
-                $ext  = $file->extension();
-                $filename = uniqid(time()).".".$ext;
-                $file->move($uploadDir, $filename);
+                }                                                
+                $filename = fileUploads($request->file('thumbnail'), $uploadDir);
             }else{                
                 $filename = (!is_null($news->thumbnail)) ? $news->thumbnail : NULL;
             }            

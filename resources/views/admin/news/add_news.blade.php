@@ -146,10 +146,13 @@
 <script src="{{asset('admin-assets/plugins/moment/moment.min.js')}}"></script>
 <!-- Tempusdominus Bootstrap 4 -->
 <script src="{{asset('admin-assets/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js')}}"></script>
-<!-- Ckeditor -->
-<script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
+<!-- Ckeditor 5 -->
+<!-- <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script> -->
+<!-- Ckeditor 4 -->
 <!-- <script src="https://cdn.ckeditor.com/4.21.0/full/ckeditor.js"></script> -->
-<!-- <script src="https://cdn.ckeditor.com/4.22.1/full/ckeditor.js"></script> -->
+<script src="https://cdn.ckeditor.com/4.22.1/full/ckeditor.js"></script>
+<!-- <script src="https://cdn.ckeditor.com/4.22.1/standard-all/ckeditor.js"></script> -->
+
 
 <!-- just validate -->
 <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
@@ -157,20 +160,30 @@
 
 @push('bottom_scripts')
 <script>
-  ClassicEditor.create(document.querySelector('#description'), {
-    ckfinder: {
-      uploadUrl: "{{ route('admin.upload.thumbnail').'?_token='.csrf_token() }}"
-    },
-
-  }).catch(error => {
-    console.error(error);
-  });
-
+  // cdeditor 5 code
+  // ClassicEditor.create(document.querySelector('#description'), {
+  //   ckfinder: {
+  //     uploadUrl: "{{ route('admin.upload.thumbnail').'?_token='.csrf_token() }}"
+  //   },
+  // }).catch(error => {
+  //   console.error(error);
+  // });
+  
+  // ckeditor 4 code
   // CKEDITOR.replace('description', {
   //     height: 500,
   //     filebrowserUploadUrl: "{{ route('admin.upload.thumbnail') }}?_token={{ csrf_token() }}",
   //     filebrowserUploadMethod: 'form'
   // });  
+
+  CKEDITOR.replace('description', {
+    height: 500,
+    extraPlugins: 'uploadimage,clipboard',
+    filebrowserUploadUrl: "{{ route('admin.upload.thumbnail') }}?_token={{ csrf_token() }}",
+    filebrowserUploadMethod: 'form',
+    clipboardUpload: true
+  });  
+
 </script>
 
 <script>

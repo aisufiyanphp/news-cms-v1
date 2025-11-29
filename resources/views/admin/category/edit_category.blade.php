@@ -111,7 +111,8 @@ $(document).ready(function(){
            },
            success: function(response){
               console.log(response);
-              hideBtnProcess('#editCategoryForm button');                                          
+              hideBtnProcess('#editCategoryForm button');  
+                                                      
               if(response.status){                 
                  Toast.fire({
                    icon: 'success',

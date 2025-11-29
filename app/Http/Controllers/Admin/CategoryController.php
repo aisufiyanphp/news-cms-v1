@@ -70,7 +70,7 @@ class CategoryController extends Controller
         return redirect()->back();        
     }
 
-    public function submitEditCategory(Request $request){        
+    public function submitEditCategory(Request $request){              
         $validator = Validator::make($request->all(), [
           'category_id' => 'required|exists:categories,id',  
           'title' => 'required|unique:categories,category_title,'.$request->input('category_id'),
@@ -107,8 +107,8 @@ class CategoryController extends Controller
                 'status'           => $request->status,  
                 'order'            => $request->order,
                 'image'            => $fileName,               
-                'meta_title'       => $request->meta_title,
-                'meta_keywords'    => $request->meta_keywords,
+                'meta_title'       => $request->input('meta_title'),
+                'meta_keywords'    => $request->meta_keyword,
                 'meta_description' => $request->meta_description,
             ]);
             $result = ["status"=>true, "msg"=>"Category successfully update"];
@@ -204,7 +204,7 @@ class CategoryController extends Controller
         }            
     }
 
-    public function editSubCategory($id){        
+    public function editSubCategory($id){         
         $categories = CategoryModel::getCategory();    
         $subCategory = SubCategoryModel::where('id', $id)->get();
         if(count($subCategory) > 0){
